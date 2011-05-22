@@ -1,0 +1,25 @@
+# Main page for the documentation of this library.
+/**
+
+\mainpage PacsAPI
+
+\section intro_sec Introduction
+PacsAPI implements an API library for handling query/retrieve DIMSE-mesagges 
+to/from a a dicom pacs server. The API wraps DCMTK library and provides 
+C-FIND-SCU, C-MOVE-SCU (and C-STORE-SCU) services. 
+Only the Series QueryRetriveModule is currently supported and
+ the query are performed at PATIENT level. This could be changed 
+ in future versions to more generic, user defined levels.
+The API does not support connections that require TLS (Transport Layer Security) protocol.
+
+\section det_sec Details
+\li Library maintainer: Luigi Carotenuto (lcarotenuto@cistib.upf.edu)
+\li Library license: Open Source
+
+\section dep_sec Dependencies
+<em>The dependencies of the library.</em>
+
+\section chg_sec Change Log
+<em>The main changes that happend to the library.</em>
+
+*/

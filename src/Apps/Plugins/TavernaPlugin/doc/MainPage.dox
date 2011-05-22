@@ -1,0 +1,13 @@
+# Main page for the documentation of this library.
+/**
+
+\mainpage TavernaPlugin
+
+\section introduction_sec Introduction
+<em>Plugin to manage Taverna workflows.</em>
+
+\section details_sec Details
+\li Library maintainer: Xavi Planes (xplanes@cistib.upf.edu)
+\li Library license: Open Source
+
+*/

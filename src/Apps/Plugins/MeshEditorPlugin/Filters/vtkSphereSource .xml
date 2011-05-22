@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<executable>
+  <category>Source</category>
+  <title>Sphere</title>
+  <description>Create a polygonal sphere centered at the origin. vtkSphereSource  creates a sphere (represented by polygons) of specified radius centered at the origin. The resolution (polygonal discretization) in both the latitude (phi) and longitude (theta) directions can be specified. It also is possible to create partial spheres by specifying maximum phi and theta angles. By default, the surface tessellation of the sphere uses triangles; however you can set LatLongTessellation to produce a tessellation using quadrilaterals.</description>
+  <version>1.0</version>
+  <documentation-url></documentation-url>
+  <license></license>
+  <contributor>Xavi Planes</contributor>
+  <constructor>New</constructor>
+  <destructor>Delete</destructor>
+  <updateFunction>Update</updateFunction>
+  <dynamicLibrary>vtkGraphics</dynamicLibrary>
+  <hierarchy>vtkSphereSource,vtkPolyDataAlgorithm,vtkAlgorithm,vtkObject,vtkObjectBase</hierarchy>
+
+  <parameters>
+    <label>Parameters</label>
+    <description>Parameters</description>
+	
+	<double>
+      <name>Radius</name>
+      <label>Radius</label>
+      <default>0.5</default>
+    </double>
+
+	<integer>
+      <name>ThetaResolution</name>
+      <label>ThetaResolution</label>
+      <default>8</default>
+    </integer>
+
+	<integer>
+      <name>PhiResolution</name>
+      <label>PhiResolution</label>
+      <default>8</default>
+    </integer>
+
+	<double>
+      <name>StartTheta</name>
+      <label>StartTheta</label>
+      <default>0.0</default>
+    </double>
+
+	<double>
+      <name>EndTheta</name>
+      <label>EndTheta</label>
+      <default>360.0</default>
+    </double>
+
+	<double>
+      <name>StartPhi</name>
+      <label>StartPhi</label>
+      <default>0.0</default>
+    </double>
+
+	<double>
+      <name>EndPhi</name>
+      <label>EndPhi</label>
+      <default>180.0</default>
+    </double>
+
+	<integer>
+      <name>LatLongTessellation</name>
+      <label>LatLongTessellation</label>
+      <default>0</default>
+    </integer>
+
+    <point>
+      <name>Center</name>
+      <label>Center</label>
+      <default>0,0,0</default>
+    </point>
+
+  </parameters>
+
+  <parameters>
+    <label>IO</label>
+    <description>Input/output parameters</description>
+    <geometry>
+      <name>Sphere</name>
+      <label>Sphere</label>
+      <dataType>vtkPolyData</dataType>
+      <channel>output</channel>
+      <index>0</index>
+    </geometry>
+  </parameters>
+
+</executable>

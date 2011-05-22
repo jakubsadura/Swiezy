@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<executable>
+  <category>Mesh processing</category>
+  <title>Feature Edges</title>
+  <description>extract boundary, non-manifold, and/or sharp edges from polygonal data</description>
+  <version>1.0</version>
+  <documentation-url>http://noodle.med.yale.edu/vtk5/classvtkFeatureEdges.html</documentation-url>
+  <license></license>
+  <contributor>Xavi Planes</contributor>
+  <constructor>New</constructor>
+  <destructor>Delete</destructor>
+  <updateFunction>Update</updateFunction>
+  <dynamicLibrary>vtkGraphics</dynamicLibrary>
+  <hierarchy>vtkFeatureEdges,vtkPolyDataAlgorithm,vtkAlgorithm,vtkObject,vtkObjectBase</hierarchy>
+
+  <parameters>
+    <label>Parameters</label>
+    <description>Parameters</description>
+    
+    <integer>
+      <name>BoundaryEdges</name>
+      <label>BoundaryEdges</label>
+      <default>1</default>
+    </integer>
+	
+	<integer>
+      <name>FeatureEdges</name>
+      <label>FeatureEdges</label>
+      <default>0</default>
+    </integer>
+	
+	<integer>
+      <name>ManifoldEdges</name>
+      <label>ManifoldEdges</label>
+      <default>0</default>
+    </integer>
+	
+	<double>
+      <name>FeatureAngle</name>
+      <label>FeatureAngle</label>
+      <default>30</default>
+    </double>
+
+	<integer>
+      <name>Coloring</name>
+      <label>Coloring</label>
+      <default>1</default>
+    </integer>
+	
+  </parameters>
+
+  <parameters>
+    <label>IO</label>
+    <description>Input/output parameters</description>
+    <geometry>
+      <name>InputMesh</name>
+      <label>InputMesh</label>
+      <dataType>vtkPolyData</dataType>
+      <channel>input</channel>
+      <index>0</index>
+    </geometry>
+    <geometry>
+      <name>OutputMesh</name>
+      <label>OutputMesh</label>
+      <dataType>vtkPolyData</dataType>
+      <channel>output</channel>
+      <index>1</index>
+    </geometry>
+  </parameters>
+
+</executable>

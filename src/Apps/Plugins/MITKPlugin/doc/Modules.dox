@@ -1,0 +1,10 @@
+
+/**
+
+\defgroup MITKPlugin MITKPlugin
+\ingroup Plugins
+\brief This is the plugin with all MITK related extensions to GIMIAS Framework
+
+
+*/
+

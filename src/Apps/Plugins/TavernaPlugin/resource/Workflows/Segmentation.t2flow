@@ -1,0 +1,686 @@
+<workflow xmlns="http://taverna.sf.net/2008/xml/t2flow" version="1" producedBy="taverna-2.2.0"><dataflow id="83abbf51-42b9-44cf-95dc-f1a6acd3bd24" role="top"><name>Segmentation</name><inputPorts><port><name>inputVolume</name><depth>0</depth><granularDepth>0</granularDepth><annotations /></port></inputPorts><outputPorts><port><name>outputMesh</name><annotations /></port><port><name>outputBlur</name><annotations /></port><port><name>outputThreshold</name><annotations /></port></outputPorts><processors><processor><name>Binary_Threshold(local)</name><inputPorts><port><name>inputVolume</name><depth>0</depth></port><port><name>upperThreshold</name><depth>0</depth></port><port><name>lowerThreshold</name><depth>0</depth></port></inputPorts><outputPorts><port><name>outputVolume</name><depth>0</depth><granularDepth>0</granularDepth></port></outputPorts><annotations /><activities><activity><raven><group>es.barcelona.upf.cistib.gimias</group><artifact>command-line-activity</artifact><version>0.2.2</version></raven><class>es.barcelona.upf.cistib.gimias.CommandLineActivity</class><inputMap><map from="upperThreshold" to="upperThreshold" /><map from="lowerThreshold" to="lowerThreshold" /><map from="inputVolume" to="inputVolume" /></inputMap><outputMap><map from="outputVolume" to="outputVolume" /></outputMap><configBean encoding="xstream"><es.barcelona.upf.cistib.gimias.AdHocExternalToolActivityConfigurationBean xmlns="">
+  <moduleDescription serialization="custom">
+    <unserializable-parents />
+    <map>
+      <default>
+        <loadFactor>0.75</loadFactor>
+        <threshold>24</threshold>
+      </default>
+      <int>32</int>
+      <int>14</int>
+      <string>acknowledgements</string>
+      <string>This command module was derived from Insight/Examples (copyright) Insight Software Consortium</string>
+      <string>location</string>
+      <string>C:\Program Files (x86)\Gimias\gimias-1.3.0.0-win64\commandlineplugins\Release/BinaryThresholdImageFilter.exe</string>
+      <string>type</string>
+      <string>CommandLineModule</string>
+      <string>searchDirectory</string>
+      <string>C:\Program Files (x86)\Gimias\gimias-1.3.0.0-win64\commandlineplugins\Release</string>
+      <string>version</string>
+      <string>0.1.0.$Revision: 13030 $(alpha)</string>
+      <string>category</string>
+      <string>Filtering</string>
+      <string>title</string>
+      <string>Binary Threshold</string>
+      <string>documentation-url</string>
+      <string />
+      <string>description</string>
+      <string>This filter produces an output image whose pixels are either one of two values ( OutsideValue or InsideValue ), depending on whether the corresponding input image pixels lie between the two thresholds ( LowerThreshold and UpperThreshold ). Values equal to either threshold is considered to be between the thresholds.</string>
+      <string>contributor</string>
+      <string>Xavi Planes</string>
+      <string>dataDirectory</string>
+      <string>C:\Data\</string>
+      <string>target</string>
+      <string>C:\Program Files (x86)\Gimias\gimias-1.3.0.0-win64\commandlineplugins\Release/BinaryThresholdImageFilter.exe</string>
+      <string>license</string>
+      <string />
+      <string>workingDirectory</string>
+      <string>C:\Program Files (x86)\Gimias\gimias-1.3.0.0-win64\</string>
+    </map>
+    <es.barcelona.upf.cistib.gimias.clp.ModuleDescription>
+      <default>
+        <parameterGroups class="linked-list">
+          <es.barcelona.upf.cistib.gimias.clp.ModuleParameterGroup serialization="custom">
+            <unserializable-parents />
+            <map>
+              <default>
+                <loadFactor>0.75</loadFactor>
+                <threshold>12</threshold>
+              </default>
+              <int>16</int>
+              <int>2</int>
+              <string>description</string>
+              <string>Parameters for Binary Thresholding</string>
+              <string>label</string>
+              <string>Binary Threshold Parameters</string>
+            </map>
+            <es.barcelona.upf.cistib.gimias.clp.ModuleParameterGroup>
+              <default>
+                <parameters class="linked-list">
+                  <es.barcelona.upf.cistib.gimias.clp.ModuleParameter serialization="custom">
+                    <unserializable-parents />
+                    <map>
+                      <default>
+                        <loadFactor>0.75</loadFactor>
+                        <threshold>12</threshold>
+                      </default>
+                      <int>16</int>
+                      <int>6</int>
+                      <string>default</string>
+                      <string>1</string>
+                      <string>description</string>
+                      <string>The value assigned to pixels that are inside the computed threshold</string>
+                      <string>longflag</string>
+                      <string>--insideValue</string>
+                      <string>tag</string>
+                      <string>integer</string>
+                      <string>name</string>
+                      <string>insideValue</string>
+                      <string>label</string>
+                      <string>Inside Value</string>
+                    </map>
+                  </es.barcelona.upf.cistib.gimias.clp.ModuleParameter>
+                  <es.barcelona.upf.cistib.gimias.clp.ModuleParameter serialization="custom">
+                    <unserializable-parents />
+                    <map>
+                      <default>
+                        <loadFactor>0.75</loadFactor>
+                        <threshold>12</threshold>
+                      </default>
+                      <int>16</int>
+                      <int>6</int>
+                      <string>default</string>
+                      <string>0</string>
+                      <string>description</string>
+                      <string>The value assigned to pixels that are outside the computed threshold</string>
+                      <string>longflag</string>
+                      <string>--outsideValue</string>
+                      <string>tag</string>
+                      <string>integer</string>
+                      <string>name</string>
+                      <string>outsideValue</string>
+                      <string>label</string>
+                      <string>Outside Value</string>
+                    </map>
+                  </es.barcelona.upf.cistib.gimias.clp.ModuleParameter>
+                  <es.barcelona.upf.cistib.gimias.clp.ModuleParameter serialization="custom">
+                    <unserializable-parents />
+                    <map>
+                      <default>
+                        <loadFactor>0.75</loadFactor>
+                        <threshold>12</threshold>
+                      </default>
+                      <int>16</int>
+                      <int>6</int>
+                      <string>default</string>
+                      <string>0</string>
+                      <string>description</string>
+                      <string />
+                      <string>longflag</string>
+                      <string>--lowerThreshold</string>
+                      <string>tag</string>
+                      <string>double</string>
+                      <string>name</string>
+                      <string>lowerThreshold</string>
+                      <string>label</string>
+                      <string>Lower Threshold</string>
+                    </map>
+                  </es.barcelona.upf.cistib.gimias.clp.ModuleParameter>
+                  <es.barcelona.upf.cistib.gimias.clp.ModuleParameter serialization="custom">
+                    <unserializable-parents />
+                    <map>
+                      <default>
+                        <loadFactor>0.75</loadFactor>
+                        <threshold>12</threshold>
+                      </default>
+                      <int>16</int>
+                      <int>6</int>
+                      <string>default</string>
+                      <string>255</string>
+                      <string>description</string>
+                      <string />
+                      <string>longflag</string>
+                      <string>--upperThreshold</string>
+                      <string>tag</string>
+                      <string>double</string>
+                      <string>name</string>
+                      <string>upperThreshold</string>
+                      <string>label</string>
+                      <string>Upper Threshold</string>
+                    </map>
+                  </es.barcelona.upf.cistib.gimias.clp.ModuleParameter>
+                </parameters>
+              </default>
+            </es.barcelona.upf.cistib.gimias.clp.ModuleParameterGroup>
+          </es.barcelona.upf.cistib.gimias.clp.ModuleParameterGroup>
+          <es.barcelona.upf.cistib.gimias.clp.ModuleParameterGroup serialization="custom">
+            <unserializable-parents />
+            <map>
+              <default>
+                <loadFactor>0.75</loadFactor>
+                <threshold>12</threshold>
+              </default>
+              <int>16</int>
+              <int>2</int>
+              <string>description</string>
+              <string>Input/output parameters</string>
+              <string>label</string>
+              <string>IO</string>
+            </map>
+            <es.barcelona.upf.cistib.gimias.clp.ModuleParameterGroup>
+              <default>
+                <parameters class="linked-list">
+                  <es.barcelona.upf.cistib.gimias.clp.ModuleParameter serialization="custom">
+                    <unserializable-parents />
+                    <map>
+                      <default>
+                        <loadFactor>0.75</loadFactor>
+                        <threshold>12</threshold>
+                      </default>
+                      <int>16</int>
+                      <int>6</int>
+                      <string>index</string>
+                      <string>0</string>
+                      <string>description</string>
+                      <string>Input volume to be filtered</string>
+                      <string>tag</string>
+                      <string>image</string>
+                      <string>name</string>
+                      <string>inputVolume</string>
+                      <string>label</string>
+                      <string>Input Volume</string>
+                      <string>channel</string>
+                      <string>input</string>
+                    </map>
+                  </es.barcelona.upf.cistib.gimias.clp.ModuleParameter>
+                  <es.barcelona.upf.cistib.gimias.clp.ModuleParameter serialization="custom">
+                    <unserializable-parents />
+                    <map>
+                      <default>
+                        <loadFactor>0.75</loadFactor>
+                        <threshold>12</threshold>
+                      </default>
+                      <int>16</int>
+                      <int>6</int>
+                      <string>index</string>
+                      <string>1</string>
+                      <string>description</string>
+                      <string>Output filtered</string>
+                      <string>tag</string>
+                      <string>image</string>
+                      <string>name</string>
+                      <string>outputVolume</string>
+                      <string>label</string>
+                      <string>Output Volume</string>
+                      <string>channel</string>
+                      <string>output</string>
+                    </map>
+                  </es.barcelona.upf.cistib.gimias.clp.ModuleParameter>
+                </parameters>
+              </default>
+            </es.barcelona.upf.cistib.gimias.clp.ModuleParameterGroup>
+          </es.barcelona.upf.cistib.gimias.clp.ModuleParameterGroup>
+        </parameterGroups>
+      </default>
+    </es.barcelona.upf.cistib.gimias.clp.ModuleDescription>
+  </moduleDescription>
+  <invocationBean class="es.barcelona.upf.cistib.gimias.local.ExternalToolLocalInvocationConfigurationBean" />
+</es.barcelona.upf.cistib.gimias.AdHocExternalToolActivityConfigurationBean></configBean><annotations /></activity></activities><dispatchStack><dispatchLayer><raven><group>net.sf.taverna.t2.core</group><artifact>workflowmodel-impl</artifact><version>1.2</version></raven><class>net.sf.taverna.t2.workflowmodel.processor.dispatch.layers.Parallelize</class><configBean encoding="xstream"><net.sf.taverna.t2.workflowmodel.processor.dispatch.layers.ParallelizeConfig xmlns="">
+  <maxJobs>1</maxJobs>
+</net.sf.taverna.t2.workflowmodel.processor.dispatch.layers.ParallelizeConfig></configBean></dispatchLayer><dispatchLayer><raven><group>net.sf.taverna.t2.core</group><artifact>workflowmodel-impl</artifact><version>1.2</version></raven><class>net.sf.taverna.t2.workflowmodel.processor.dispatch.layers.ErrorBounce</class><configBean encoding="xstream"><null xmlns="" /></configBean></dispatchLayer><dispatchLayer><raven><group>net.sf.taverna.t2.core</group><artifact>workflowmodel-impl</artifact><version>1.2</version></raven><class>net.sf.taverna.t2.workflowmodel.processor.dispatch.layers.Failover</class><configBean encoding="xstream"><null xmlns="" /></configBean></dispatchLayer><dispatchLayer><raven><group>net.sf.taverna.t2.core</group><artifact>workflowmodel-impl</artifact><version>1.2</version></raven><class>net.sf.taverna.t2.workflowmodel.processor.dispatch.layers.Retry</class><configBean encoding="xstream"><net.sf.taverna.t2.workflowmodel.processor.dispatch.layers.RetryConfig xmlns="">
+  <backoffFactor>1.0</backoffFactor>
+  <initialDelay>1000</initialDelay>
+  <maxDelay>5000</maxDelay>
+  <maxRetries>0</maxRetries>
+</net.sf.taverna.t2.workflowmodel.processor.dispatch.layers.RetryConfig></configBean></dispatchLayer><dispatchLayer><raven><group>net.sf.taverna.t2.core</group><artifact>workflowmodel-impl</artifact><version>1.2</version></raven><class>net.sf.taverna.t2.workflowmodel.processor.dispatch.layers.Invoke</class><configBean encoding="xstream"><null xmlns="" /></configBean></dispatchLayer></dispatchStack><iterationStrategyStack><iteration><strategy><cross><port name="inputVolume" depth="0" /><port name="upperThreshold" depth="0" /><port name="lowerThreshold" depth="0" /></cross></strategy></iteration></iterationStrategyStack></processor><processor><name>Marching_cubes(local)</name><inputPorts><port><name>inputVolume</name><depth>0</depth></port></inputPorts><outputPorts><port><name>outputMesh</name><depth>0</depth><granularDepth>0</granularDepth></port></outputPorts><annotations /><activities><activity><raven><group>es.barcelona.upf.cistib.gimias</group><artifact>command-line-activity</artifact><version>0.2.2</version></raven><class>es.barcelona.upf.cistib.gimias.CommandLineActivity</class><inputMap><map from="inputVolume" to="inputVolume" /></inputMap><outputMap><map from="outputMesh" to="outputMesh" /></outputMap><configBean encoding="xstream"><es.barcelona.upf.cistib.gimias.AdHocExternalToolActivityConfigurationBean xmlns="">
+  <moduleDescription serialization="custom">
+    <unserializable-parents />
+    <map>
+      <default>
+        <loadFactor>0.75</loadFactor>
+        <threshold>12</threshold>
+      </default>
+      <int>16</int>
+      <int>12</int>
+      <string>title</string>
+      <string>Marching cubes</string>
+      <string>category</string>
+      <string>Segmentation</string>
+      <string>location</string>
+      <string>C:\Program Files (x86)\Gimias\gimias-1.3.0.0-win64\commandlineplugins\Release/MarchingCubes.exe</string>
+      <string>contributor</string>
+      <string>Xavi Planes</string>
+      <string>description</string>
+      <string>Generate isosurface(s) from volume. vtkMarchingCubes is a filter that takes as input a volume (e.g., 3D structured point set) and generates on output one or more isosurfaces. One or more contour values must be specified to generate the isosurfaces. Alternatively, you can specify a min/max scalar range and the number of contours to generate a series of evenly spaced contour values.</string>
+      <string>dataDirectory</string>
+      <string>C:\Data\</string>
+      <string>target</string>
+      <string>C:\Program Files (x86)\Gimias\gimias-1.3.0.0-win64\commandlineplugins\Release/MarchingCubes.exe</string>
+      <string>license</string>
+      <string />
+      <string>type</string>
+      <string>CommandLineModule</string>
+      <string>searchDirectory</string>
+      <string>C:\Program Files (x86)\Gimias\gimias-1.3.0.0-win64\commandlineplugins\Release</string>
+      <string>version</string>
+      <string>0.1.0.$Revision: 1.1 $(alpha)</string>
+      <string>workingDirectory</string>
+      <string>C:\Program Files (x86)\Gimias\gimias-1.3.0.0-win64\</string>
+    </map>
+    <es.barcelona.upf.cistib.gimias.clp.ModuleDescription>
+      <default>
+        <parameterGroups class="linked-list">
+          <es.barcelona.upf.cistib.gimias.clp.ModuleParameterGroup serialization="custom">
+            <unserializable-parents />
+            <map>
+              <default>
+                <loadFactor>0.75</loadFactor>
+                <threshold>12</threshold>
+              </default>
+              <int>16</int>
+              <int>1</int>
+              <string>label</string>
+              <string>Marching cubes Parameters</string>
+            </map>
+            <es.barcelona.upf.cistib.gimias.clp.ModuleParameterGroup>
+              <default>
+                <parameters class="linked-list">
+                  <es.barcelona.upf.cistib.gimias.clp.ModuleParameter serialization="custom">
+                    <unserializable-parents />
+                    <map>
+                      <default>
+                        <loadFactor>0.75</loadFactor>
+                        <threshold>12</threshold>
+                      </default>
+                      <int>16</int>
+                      <int>6</int>
+                      <string>default</string>
+                      <string>false</string>
+                      <string>description</string>
+                      <string>Normal computation is fairly expensive in both time and storage. If the output data will be processed by filters that modify topology or geometry, it may be wise to turn Normals and Gradients off.</string>
+                      <string>longflag</string>
+                      <string>--computeNormals</string>
+                      <string>tag</string>
+                      <string>boolean</string>
+                      <string>name</string>
+                      <string>ComputeNormals</string>
+                      <string>label</string>
+                      <string>Compute Normals</string>
+                    </map>
+                  </es.barcelona.upf.cistib.gimias.clp.ModuleParameter>
+                  <es.barcelona.upf.cistib.gimias.clp.ModuleParameter serialization="custom">
+                    <unserializable-parents />
+                    <map>
+                      <default>
+                        <loadFactor>0.75</loadFactor>
+                        <threshold>12</threshold>
+                      </default>
+                      <int>16</int>
+                      <int>5</int>
+                      <string>default</string>
+                      <string>false</string>
+                      <string>longflag</string>
+                      <string>--computeGradients</string>
+                      <string>tag</string>
+                      <string>boolean</string>
+                      <string>name</string>
+                      <string>ComputeGradients</string>
+                      <string>label</string>
+                      <string>Compute Gradients</string>
+                    </map>
+                  </es.barcelona.upf.cistib.gimias.clp.ModuleParameter>
+                  <es.barcelona.upf.cistib.gimias.clp.ModuleParameter serialization="custom">
+                    <unserializable-parents />
+                    <map>
+                      <default>
+                        <loadFactor>0.75</loadFactor>
+                        <threshold>12</threshold>
+                      </default>
+                      <int>16</int>
+                      <int>5</int>
+                      <string>default</string>
+                      <string>false</string>
+                      <string>longflag</string>
+                      <string>--computeScalars</string>
+                      <string>tag</string>
+                      <string>boolean</string>
+                      <string>name</string>
+                      <string>ComputeScalars</string>
+                      <string>label</string>
+                      <string>Compute Scalars</string>
+                    </map>
+                  </es.barcelona.upf.cistib.gimias.clp.ModuleParameter>
+                  <es.barcelona.upf.cistib.gimias.clp.ModuleParameter serialization="custom">
+                    <unserializable-parents />
+                    <map>
+                      <default>
+                        <loadFactor>0.75</loadFactor>
+                        <threshold>12</threshold>
+                      </default>
+                      <int>16</int>
+                      <int>6</int>
+                      <string>default</string>
+                      <string>0.5</string>
+                      <string>description</string>
+                      <string>Set a particular contour value at contour number 0.</string>
+                      <string>longflag</string>
+                      <string>--value</string>
+                      <string>tag</string>
+                      <string>double</string>
+                      <string>name</string>
+                      <string>Value</string>
+                      <string>label</string>
+                      <string>Value</string>
+                    </map>
+                  </es.barcelona.upf.cistib.gimias.clp.ModuleParameter>
+                </parameters>
+              </default>
+            </es.barcelona.upf.cistib.gimias.clp.ModuleParameterGroup>
+          </es.barcelona.upf.cistib.gimias.clp.ModuleParameterGroup>
+          <es.barcelona.upf.cistib.gimias.clp.ModuleParameterGroup serialization="custom">
+            <unserializable-parents />
+            <map>
+              <default>
+                <loadFactor>0.75</loadFactor>
+                <threshold>12</threshold>
+              </default>
+              <int>16</int>
+              <int>2</int>
+              <string>description</string>
+              <string>Input/output parameters</string>
+              <string>label</string>
+              <string>IO</string>
+            </map>
+            <es.barcelona.upf.cistib.gimias.clp.ModuleParameterGroup>
+              <default>
+                <parameters class="linked-list">
+                  <es.barcelona.upf.cistib.gimias.clp.ModuleParameter serialization="custom">
+                    <unserializable-parents />
+                    <map>
+                      <default>
+                        <loadFactor>0.75</loadFactor>
+                        <threshold>12</threshold>
+                      </default>
+                      <int>16</int>
+                      <int>6</int>
+                      <string>index</string>
+                      <string>0</string>
+                      <string>description</string>
+                      <string>Input Image</string>
+                      <string>tag</string>
+                      <string>image</string>
+                      <string>name</string>
+                      <string>inputVolume</string>
+                      <string>label</string>
+                      <string>Input volume</string>
+                      <string>channel</string>
+                      <string>input</string>
+                    </map>
+                  </es.barcelona.upf.cistib.gimias.clp.ModuleParameter>
+                  <es.barcelona.upf.cistib.gimias.clp.ModuleParameter serialization="custom">
+                    <unserializable-parents />
+                    <map>
+                      <default>
+                        <loadFactor>0.75</loadFactor>
+                        <threshold>12</threshold>
+                      </default>
+                      <int>16</int>
+                      <int>6</int>
+                      <string>index</string>
+                      <string>1</string>
+                      <string>description</string>
+                      <string>Output Mesh</string>
+                      <string>tag</string>
+                      <string>geometry</string>
+                      <string>name</string>
+                      <string>outputMesh</string>
+                      <string>label</string>
+                      <string>Output Mesh</string>
+                      <string>channel</string>
+                      <string>output</string>
+                    </map>
+                  </es.barcelona.upf.cistib.gimias.clp.ModuleParameter>
+                </parameters>
+              </default>
+            </es.barcelona.upf.cistib.gimias.clp.ModuleParameterGroup>
+          </es.barcelona.upf.cistib.gimias.clp.ModuleParameterGroup>
+        </parameterGroups>
+      </default>
+    </es.barcelona.upf.cistib.gimias.clp.ModuleDescription>
+  </moduleDescription>
+  <invocationBean class="es.barcelona.upf.cistib.gimias.local.ExternalToolLocalInvocationConfigurationBean" />
+</es.barcelona.upf.cistib.gimias.AdHocExternalToolActivityConfigurationBean></configBean><annotations /></activity></activities><dispatchStack><dispatchLayer><raven><group>net.sf.taverna.t2.core</group><artifact>workflowmodel-impl</artifact><version>1.2</version></raven><class>net.sf.taverna.t2.workflowmodel.processor.dispatch.layers.Parallelize</class><configBean encoding="xstream"><net.sf.taverna.t2.workflowmodel.processor.dispatch.layers.ParallelizeConfig xmlns="">
+  <maxJobs>1</maxJobs>
+</net.sf.taverna.t2.workflowmodel.processor.dispatch.layers.ParallelizeConfig></configBean></dispatchLayer><dispatchLayer><raven><group>net.sf.taverna.t2.core</group><artifact>workflowmodel-impl</artifact><version>1.2</version></raven><class>net.sf.taverna.t2.workflowmodel.processor.dispatch.layers.ErrorBounce</class><configBean encoding="xstream"><null xmlns="" /></configBean></dispatchLayer><dispatchLayer><raven><group>net.sf.taverna.t2.core</group><artifact>workflowmodel-impl</artifact><version>1.2</version></raven><class>net.sf.taverna.t2.workflowmodel.processor.dispatch.layers.Failover</class><configBean encoding="xstream"><null xmlns="" /></configBean></dispatchLayer><dispatchLayer><raven><group>net.sf.taverna.t2.core</group><artifact>workflowmodel-impl</artifact><version>1.2</version></raven><class>net.sf.taverna.t2.workflowmodel.processor.dispatch.layers.Retry</class><configBean encoding="xstream"><net.sf.taverna.t2.workflowmodel.processor.dispatch.layers.RetryConfig xmlns="">
+  <backoffFactor>1.0</backoffFactor>
+  <initialDelay>1000</initialDelay>
+  <maxDelay>5000</maxDelay>
+  <maxRetries>0</maxRetries>
+</net.sf.taverna.t2.workflowmodel.processor.dispatch.layers.RetryConfig></configBean></dispatchLayer><dispatchLayer><raven><group>net.sf.taverna.t2.core</group><artifact>workflowmodel-impl</artifact><version>1.2</version></raven><class>net.sf.taverna.t2.workflowmodel.processor.dispatch.layers.Invoke</class><configBean encoding="xstream"><null xmlns="" /></configBean></dispatchLayer></dispatchStack><iterationStrategyStack><iteration><strategy><cross><port name="inputVolume" depth="0" /></cross></strategy></iteration></iterationStrategyStack></processor><processor><name>upperThreshold_value</name><inputPorts /><outputPorts><port><name>value</name><depth>0</depth><granularDepth>0</granularDepth></port></outputPorts><annotations /><activities><activity><raven><group>net.sf.taverna.t2.activities</group><artifact>stringconstant-activity</artifact><version>1.2</version></raven><class>net.sf.taverna.t2.activities.stringconstant.StringConstantActivity</class><inputMap /><outputMap><map from="value" to="value" /></outputMap><configBean encoding="xstream"><net.sf.taverna.t2.activities.stringconstant.StringConstantConfigurationBean xmlns="">
+  <value>20000</value>
+</net.sf.taverna.t2.activities.stringconstant.StringConstantConfigurationBean></configBean><annotations /></activity></activities><dispatchStack><dispatchLayer><raven><group>net.sf.taverna.t2.core</group><artifact>workflowmodel-impl</artifact><version>1.2</version></raven><class>net.sf.taverna.t2.workflowmodel.processor.dispatch.layers.Parallelize</class><configBean encoding="xstream"><net.sf.taverna.t2.workflowmodel.processor.dispatch.layers.ParallelizeConfig xmlns="">
+  <maxJobs>1</maxJobs>
+</net.sf.taverna.t2.workflowmodel.processor.dispatch.layers.ParallelizeConfig></configBean></dispatchLayer><dispatchLayer><raven><group>net.sf.taverna.t2.core</group><artifact>workflowmodel-impl</artifact><version>1.2</version></raven><class>net.sf.taverna.t2.workflowmodel.processor.dispatch.layers.ErrorBounce</class><configBean encoding="xstream"><null xmlns="" /></configBean></dispatchLayer><dispatchLayer><raven><group>net.sf.taverna.t2.core</group><artifact>workflowmodel-impl</artifact><version>1.2</version></raven><class>net.sf.taverna.t2.workflowmodel.processor.dispatch.layers.Failover</class><configBean encoding="xstream"><null xmlns="" /></configBean></dispatchLayer><dispatchLayer><raven><group>net.sf.taverna.t2.core</group><artifact>workflowmodel-impl</artifact><version>1.2</version></raven><class>net.sf.taverna.t2.workflowmodel.processor.dispatch.layers.Retry</class><configBean encoding="xstream"><net.sf.taverna.t2.workflowmodel.processor.dispatch.layers.RetryConfig xmlns="">
+  <backoffFactor>1.0</backoffFactor>
+  <initialDelay>1000</initialDelay>
+  <maxDelay>5000</maxDelay>
+  <maxRetries>0</maxRetries>
+</net.sf.taverna.t2.workflowmodel.processor.dispatch.layers.RetryConfig></configBean></dispatchLayer><dispatchLayer><raven><group>net.sf.taverna.t2.core</group><artifact>workflowmodel-impl</artifact><version>1.2</version></raven><class>net.sf.taverna.t2.workflowmodel.processor.dispatch.layers.Invoke</class><configBean encoding="xstream"><null xmlns="" /></configBean></dispatchLayer></dispatchStack><iterationStrategyStack><iteration><strategy /></iteration></iterationStrategyStack></processor><processor><name>lowerThreshold_value</name><inputPorts /><outputPorts><port><name>value</name><depth>0</depth><granularDepth>0</granularDepth></port></outputPorts><annotations /><activities><activity><raven><group>net.sf.taverna.t2.activities</group><artifact>stringconstant-activity</artifact><version>1.2</version></raven><class>net.sf.taverna.t2.activities.stringconstant.StringConstantActivity</class><inputMap /><outputMap><map from="value" to="value" /></outputMap><configBean encoding="xstream"><net.sf.taverna.t2.activities.stringconstant.StringConstantConfigurationBean xmlns="">
+  <value>2000</value>
+</net.sf.taverna.t2.activities.stringconstant.StringConstantConfigurationBean></configBean><annotations /></activity></activities><dispatchStack><dispatchLayer><raven><group>net.sf.taverna.t2.core</group><artifact>workflowmodel-impl</artifact><version>1.2</version></raven><class>net.sf.taverna.t2.workflowmodel.processor.dispatch.layers.Parallelize</class><configBean encoding="xstream"><net.sf.taverna.t2.workflowmodel.processor.dispatch.layers.ParallelizeConfig xmlns="">
+  <maxJobs>1</maxJobs>
+</net.sf.taverna.t2.workflowmodel.processor.dispatch.layers.ParallelizeConfig></configBean></dispatchLayer><dispatchLayer><raven><group>net.sf.taverna.t2.core</group><artifact>workflowmodel-impl</artifact><version>1.2</version></raven><class>net.sf.taverna.t2.workflowmodel.processor.dispatch.layers.ErrorBounce</class><configBean encoding="xstream"><null xmlns="" /></configBean></dispatchLayer><dispatchLayer><raven><group>net.sf.taverna.t2.core</group><artifact>workflowmodel-impl</artifact><version>1.2</version></raven><class>net.sf.taverna.t2.workflowmodel.processor.dispatch.layers.Failover</class><configBean encoding="xstream"><null xmlns="" /></configBean></dispatchLayer><dispatchLayer><raven><group>net.sf.taverna.t2.core</group><artifact>workflowmodel-impl</artifact><version>1.2</version></raven><class>net.sf.taverna.t2.workflowmodel.processor.dispatch.layers.Retry</class><configBean encoding="xstream"><net.sf.taverna.t2.workflowmodel.processor.dispatch.layers.RetryConfig xmlns="">
+  <backoffFactor>1.0</backoffFactor>
+  <initialDelay>1000</initialDelay>
+  <maxDelay>5000</maxDelay>
+  <maxRetries>0</maxRetries>
+</net.sf.taverna.t2.workflowmodel.processor.dispatch.layers.RetryConfig></configBean></dispatchLayer><dispatchLayer><raven><group>net.sf.taverna.t2.core</group><artifact>workflowmodel-impl</artifact><version>1.2</version></raven><class>net.sf.taverna.t2.workflowmodel.processor.dispatch.layers.Invoke</class><configBean encoding="xstream"><null xmlns="" /></configBean></dispatchLayer></dispatchStack><iterationStrategyStack><iteration><strategy /></iteration></iterationStrategyStack></processor><processor><name>Gaussian_Blur(local)</name><inputPorts><port><name>inputVolume</name><depth>0</depth></port></inputPorts><outputPorts><port><name>outputVolume</name><depth>0</depth><granularDepth>0</granularDepth></port></outputPorts><annotations /><activities><activity><raven><group>es.barcelona.upf.cistib.gimias</group><artifact>command-line-activity</artifact><version>0.2.2</version></raven><class>es.barcelona.upf.cistib.gimias.CommandLineActivity</class><inputMap><map from="inputVolume" to="inputVolume" /></inputMap><outputMap><map from="outputVolume" to="outputVolume" /></outputMap><configBean encoding="xstream"><es.barcelona.upf.cistib.gimias.AdHocExternalToolActivityConfigurationBean xmlns="">
+  <moduleDescription serialization="custom">
+    <unserializable-parents />
+    <map>
+      <default>
+        <loadFactor>0.75</loadFactor>
+        <threshold>24</threshold>
+      </default>
+      <int>32</int>
+      <int>15</int>
+      <string>acknowledgements</string>
+      <string>This work is part of the National Alliance for Medical Image Computing (NAMIC), funded by the National Institutes of Health through the NIH Roadmap for Medical Research, Grant U54 EB005149.</string>
+      <string>index</string>
+      <string>3</string>
+      <string>location</string>
+      <string>C:\Program Files (x86)\Gimias\gimias-1.3.0.0-win64\commandlineplugins\Release/GaussianBlurImageFilter.exe</string>
+      <string>type</string>
+      <string>CommandLineModule</string>
+      <string>searchDirectory</string>
+      <string>C:\Program Files (x86)\Gimias\gimias-1.3.0.0-win64\commandlineplugins\Release</string>
+      <string>version</string>
+      <string>0.1.0.$Revision: 1.1 $(alpha)</string>
+      <string>category</string>
+      <string>Filtering.Denoising</string>
+      <string>title</string>
+      <string>Gaussian Blur</string>
+      <string>documentation-url</string>
+      <string>http://www.slicer.org/slicerWiki/index.php/Modules:GaussianBlur-Documentation-3.6</string>
+      <string>description</string>
+      <string>Apply a gaussian blurr to an image</string>
+      <string>contributor</string>
+      <string>Julien Jomier and Stephen Aylward</string>
+      <string>dataDirectory</string>
+      <string>C:\Data\</string>
+      <string>target</string>
+      <string>C:\Program Files (x86)\Gimias\gimias-1.3.0.0-win64\commandlineplugins\Release/GaussianBlurImageFilter.exe</string>
+      <string>license</string>
+      <string />
+      <string>workingDirectory</string>
+      <string>C:\Program Files (x86)\Gimias\gimias-1.3.0.0-win64\</string>
+    </map>
+    <es.barcelona.upf.cistib.gimias.clp.ModuleDescription>
+      <default>
+        <parameterGroups class="linked-list">
+          <es.barcelona.upf.cistib.gimias.clp.ModuleParameterGroup serialization="custom">
+            <unserializable-parents />
+            <map>
+              <default>
+                <loadFactor>0.75</loadFactor>
+                <threshold>12</threshold>
+              </default>
+              <int>16</int>
+              <int>0</int>
+            </map>
+            <es.barcelona.upf.cistib.gimias.clp.ModuleParameterGroup>
+              <default>
+                <parameters class="linked-list">
+                  <es.barcelona.upf.cistib.gimias.clp.ModuleParameter serialization="custom">
+                    <unserializable-parents />
+                    <map>
+                      <default>
+                        <loadFactor>0.75</loadFactor>
+                        <threshold>12</threshold>
+                      </default>
+                      <int>16</int>
+                      <int>7</int>
+                      <string>default</string>
+                      <string>1.0</string>
+                      <string>flag</string>
+                      <string>s</string>
+                      <string>description</string>
+                      <string>Sigma value in physical units (e.g., mm) of the Gaussian kernel</string>
+                      <string>longflag</string>
+                      <string>sigma</string>
+                      <string>tag</string>
+                      <string>double</string>
+                      <string>name</string>
+                      <string>sigma</string>
+                      <string>label</string>
+                      <string>Sigma</string>
+                    </map>
+                  </es.barcelona.upf.cistib.gimias.clp.ModuleParameter>
+                </parameters>
+              </default>
+            </es.barcelona.upf.cistib.gimias.clp.ModuleParameterGroup>
+          </es.barcelona.upf.cistib.gimias.clp.ModuleParameterGroup>
+          <es.barcelona.upf.cistib.gimias.clp.ModuleParameterGroup serialization="custom">
+            <unserializable-parents />
+            <map>
+              <default>
+                <loadFactor>0.75</loadFactor>
+                <threshold>12</threshold>
+              </default>
+              <int>16</int>
+              <int>2</int>
+              <string>description</string>
+              <string>Input/output parameters</string>
+              <string>label</string>
+              <string>IO</string>
+            </map>
+            <es.barcelona.upf.cistib.gimias.clp.ModuleParameterGroup>
+              <default>
+                <parameters class="linked-list">
+                  <es.barcelona.upf.cistib.gimias.clp.ModuleParameter serialization="custom">
+                    <unserializable-parents />
+                    <map>
+                      <default>
+                        <loadFactor>0.75</loadFactor>
+                        <threshold>12</threshold>
+                      </default>
+                      <int>16</int>
+                      <int>6</int>
+                      <string>index</string>
+                      <string>0</string>
+                      <string>description</string>
+                      <string>Input volume</string>
+                      <string>tag</string>
+                      <string>image</string>
+                      <string>name</string>
+                      <string>inputVolume</string>
+                      <string>label</string>
+                      <string>Input Volume</string>
+                      <string>channel</string>
+                      <string>input</string>
+                    </map>
+                  </es.barcelona.upf.cistib.gimias.clp.ModuleParameter>
+                  <es.barcelona.upf.cistib.gimias.clp.ModuleParameter serialization="custom">
+                    <unserializable-parents />
+                    <map>
+                      <default>
+                        <loadFactor>0.75</loadFactor>
+                        <threshold>12</threshold>
+                      </default>
+                      <int>16</int>
+                      <int>6</int>
+                      <string>index</string>
+                      <string>1</string>
+                      <string>description</string>
+                      <string>Blurred Volume</string>
+                      <string>tag</string>
+                      <string>image</string>
+                      <string>name</string>
+                      <string>outputVolume</string>
+                      <string>label</string>
+                      <string>Output Volume</string>
+                      <string>channel</string>
+                      <string>output</string>
+                    </map>
+                  </es.barcelona.upf.cistib.gimias.clp.ModuleParameter>
+                </parameters>
+              </default>
+            </es.barcelona.upf.cistib.gimias.clp.ModuleParameterGroup>
+          </es.barcelona.upf.cistib.gimias.clp.ModuleParameterGroup>
+        </parameterGroups>
+      </default>
+    </es.barcelona.upf.cistib.gimias.clp.ModuleDescription>
+  </moduleDescription>
+  <invocationBean class="es.barcelona.upf.cistib.gimias.local.ExternalToolLocalInvocationConfigurationBean" />
+</es.barcelona.upf.cistib.gimias.AdHocExternalToolActivityConfigurationBean></configBean><annotations /></activity></activities><dispatchStack><dispatchLayer><raven><group>net.sf.taverna.t2.core</group><artifact>workflowmodel-impl</artifact><version>1.2</version></raven><class>net.sf.taverna.t2.workflowmodel.processor.dispatch.layers.Parallelize</class><configBean encoding="xstream"><net.sf.taverna.t2.workflowmodel.processor.dispatch.layers.ParallelizeConfig xmlns="">
+  <maxJobs>1</maxJobs>
+</net.sf.taverna.t2.workflowmodel.processor.dispatch.layers.ParallelizeConfig></configBean></dispatchLayer><dispatchLayer><raven><group>net.sf.taverna.t2.core</group><artifact>workflowmodel-impl</artifact><version>1.2</version></raven><class>net.sf.taverna.t2.workflowmodel.processor.dispatch.layers.ErrorBounce</class><configBean encoding="xstream"><null xmlns="" /></configBean></dispatchLayer><dispatchLayer><raven><group>net.sf.taverna.t2.core</group><artifact>workflowmodel-impl</artifact><version>1.2</version></raven><class>net.sf.taverna.t2.workflowmodel.processor.dispatch.layers.Failover</class><configBean encoding="xstream"><null xmlns="" /></configBean></dispatchLayer><dispatchLayer><raven><group>net.sf.taverna.t2.core</group><artifact>workflowmodel-impl</artifact><version>1.2</version></raven><class>net.sf.taverna.t2.workflowmodel.processor.dispatch.layers.Retry</class><configBean encoding="xstream"><net.sf.taverna.t2.workflowmodel.processor.dispatch.layers.RetryConfig xmlns="">
+  <backoffFactor>1.0</backoffFactor>
+  <initialDelay>1000</initialDelay>
+  <maxDelay>5000</maxDelay>
+  <maxRetries>0</maxRetries>
+</net.sf.taverna.t2.workflowmodel.processor.dispatch.layers.RetryConfig></configBean></dispatchLayer><dispatchLayer><raven><group>net.sf.taverna.t2.core</group><artifact>workflowmodel-impl</artifact><version>1.2</version></raven><class>net.sf.taverna.t2.workflowmodel.processor.dispatch.layers.Invoke</class><configBean encoding="xstream"><null xmlns="" /></configBean></dispatchLayer></dispatchStack><iterationStrategyStack><iteration><strategy><cross><port name="inputVolume" depth="0" /></cross></strategy></iteration></iterationStrategyStack></processor></processors><conditions /><datalinks><datalink><sink type="processor"><processor>Binary_Threshold(local)</processor><port>inputVolume</port></sink><source type="dataflow"><port>inputVolume</port></source></datalink><datalink><sink type="processor"><processor>Binary_Threshold(local)</processor><port>upperThreshold</port></sink><source type="processor"><processor>upperThreshold_value</processor><port>value</port></source></datalink><datalink><sink type="processor"><processor>Binary_Threshold(local)</processor><port>lowerThreshold</port></sink><source type="processor"><processor>lowerThreshold_value</processor><port>value</port></source></datalink><datalink><sink type="processor"><processor>Marching_cubes(local)</processor><port>inputVolume</port></sink><source type="processor"><processor>Gaussian_Blur(local)</processor><port>outputVolume</port></source></datalink><datalink><sink type="processor"><processor>Gaussian_Blur(local)</processor><port>inputVolume</port></sink><source type="processor"><processor>Binary_Threshold(local)</processor><port>outputVolume</port></source></datalink><datalink><sink type="dataflow"><port>outputMesh</port></sink><source type="processor"><processor>Marching_cubes(local)</processor><port>outputMesh</port></source></datalink><datalink><sink type="dataflow"><port>outputBlur</port></sink><source type="processor"><processor>Gaussian_Blur(local)</processor><port>outputVolume</port></source></datalink><datalink><sink type="dataflow"><port>outputThreshold</port></sink><source type="processor"><processor>Binary_Threshold(local)</processor><port>outputVolume</port></source></datalink></datalinks><annotations><annotation_chain encoding="xstream"><net.sf.taverna.t2.annotation.AnnotationChainImpl xmlns="">
+  <annotationAssertions>
+    <net.sf.taverna.t2.annotation.AnnotationAssertionImpl>
+      <annotationBean class="net.sf.taverna.t2.annotation.annotationbeans.Author">
+        <text>Xavi Planes</text>
+      </annotationBean>
+      <date>2011-01-22 13:09:02.620 CET</date>
+      <creators />
+      <curationEventList />
+    </net.sf.taverna.t2.annotation.AnnotationAssertionImpl>
+  </annotationAssertions>
+</net.sf.taverna.t2.annotation.AnnotationChainImpl></annotation_chain><annotation_chain_2_2 encoding="xstream"><net.sf.taverna.t2.annotation.AnnotationChainImpl xmlns="">
+  <annotationAssertions>
+    <net.sf.taverna.t2.annotation.AnnotationAssertionImpl>
+      <annotationBean class="net.sf.taverna.t2.annotation.annotationbeans.IdentificationAssertion">
+        <identification>9818f098-1695-4b08-a48d-f0170a24e552</identification>
+      </annotationBean>
+      <date>2011-01-22 13:09:21.620 CET</date>
+      <creators />
+      <curationEventList />
+    </net.sf.taverna.t2.annotation.AnnotationAssertionImpl>
+  </annotationAssertions>
+</net.sf.taverna.t2.annotation.AnnotationChainImpl></annotation_chain_2_2><annotation_chain encoding="xstream"><net.sf.taverna.t2.annotation.AnnotationChainImpl xmlns="">
+  <annotationAssertions>
+    <net.sf.taverna.t2.annotation.AnnotationAssertionImpl>
+      <annotationBean class="net.sf.taverna.t2.annotation.annotationbeans.DescriptiveTitle">
+        <text>Segmentation</text>
+      </annotationBean>
+      <date>2011-01-22 13:09:08.776 CET</date>
+      <creators />
+      <curationEventList />
+    </net.sf.taverna.t2.annotation.AnnotationAssertionImpl>
+  </annotationAssertions>
+</net.sf.taverna.t2.annotation.AnnotationChainImpl></annotation_chain><annotation_chain_2_2 encoding="xstream"><net.sf.taverna.t2.annotation.AnnotationChainImpl xmlns="">
+  <annotationAssertions>
+    <net.sf.taverna.t2.annotation.AnnotationAssertionImpl>
+      <annotationBean class="net.sf.taverna.t2.annotation.annotationbeans.IdentificationAssertion">
+        <identification>83abbf51-42b9-44cf-95dc-f1a6acd3bd24</identification>
+      </annotationBean>
+      <date>2011-01-23 18:33:07.714 CET</date>
+      <creators />
+      <curationEventList />
+    </net.sf.taverna.t2.annotation.AnnotationAssertionImpl>
+  </annotationAssertions>
+</net.sf.taverna.t2.annotation.AnnotationChainImpl></annotation_chain_2_2></annotations></dataflow></workflow>

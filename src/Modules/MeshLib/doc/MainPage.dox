@@ -1,0 +1,19 @@
+# Main page for the documentation of this library.
+/**
+
+\mainpage Mesh library (MeshLib)
+
+\section intro_sec Introduction
+Provides classes for representing meshes and algorithms:
+
+\section det_sec Details
+\li Library maintainer: Chiara Riccobene (criccobene@cistib.upf.edu)
+\li Library license: Open Source
+
+\section dep_sec Dependencies
+<em>The dependencies of the library.</em>
+
+\section chg_sec Change Log
+<em>The main changes that happend to the library.</em>
+
+*/

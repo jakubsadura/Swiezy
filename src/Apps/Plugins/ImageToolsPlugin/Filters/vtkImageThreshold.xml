@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<executable>
+  <category>Image processing</category>
+  <title>Image Threshold</title>
+  <description>Threshold an image</description>
+  <version>1.0</version>
+  <documentation-url></documentation-url>
+  <license></license>
+  <contributor>Xavi Planes</contributor>
+  <constructor>New</constructor>
+  <destructor>Delete</destructor>
+  <updateFunction>Update</updateFunction>
+  <dynamicLibrary>vtkImaging</dynamicLibrary>
+  <hierarchy>vtkImageThreshold,vtkThreadedImageAlgorithm,vtkImageAlgorithm,vtkAlgorithm,vtkObject,vtkObjectBase</hierarchy>
+
+  <parameters>
+    <label>Parameters</label>
+    <description>Parameters</description>
+    
+    <double>
+      <name>ThresholdByUpper</name>
+      <label>ThresholdByUpper</label>
+      <function>ThresholdByUpper</function>
+      <default>100</default>
+    </double>
+
+    <double>
+      <name>OutValue</name>
+      <label>OutValue</label>
+      <default>0</default>
+    </double>
+  </parameters>
+
+  <parameters>
+    <label>IO</label>
+    <description>Input/output parameters</description>
+    <image>
+      <name>InputImage</name>
+      <label>InputImage</label>
+      <dataType>vtkImageData</dataType>
+      <channel>input</channel>
+      <index>0</index>
+    </image>
+    <image>
+      <name>OutputImage</name>
+      <label>OutputImage</label>
+      <dataType>vtkImageData</dataType>
+      <channel>output</channel>
+      <index>1</index>
+    </image>
+  </parameters>
+
+</executable>

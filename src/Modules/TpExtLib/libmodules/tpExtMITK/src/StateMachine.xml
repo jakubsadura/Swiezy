@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Event_Id = 0: this is a * transition with all other eventId's not declared in that state -->
+<mitkInteraktionStates xmlns="http://tempuri.org/StateMachine.xsd" STYLE="User001">
+  <!-- ***WARNING*** do not use any &, % and so on in NAME -->
+  <!-- -->
+  <!-- -->
+ 
+  
+  <stateMachine NAME="PointSelectInteractor">
+  
+    <state NAME="unselected" ID="0" START_STATE="TRUE" X_POS="17" Y_POS="23" WIDTH="100" HEIGHT="50">
+      <transition NAME="check selected mesh" NEXT_STATE_ID="1" EVENT_ID="3">
+        <action ID="30">
+          <!--AcCHECKELEMENT-->
+        </action>
+      </transition>
+      <transition NAME="check selected plane" NEXT_STATE_ID="2" EVENT_ID="2">
+        <action ID="31">
+          <!--AcCHECKOBJECT-->
+        </action>
+      </transition>
+    </state>
+    
+    <state name="selected mesh" ID="1" X_POS="903" Y_POS="38" WIDTH="100" HEIGHT="50">
+      <transition NAME="StNo" NEXT_STATE_ID="0" EVENT_ID="1003">
+        <action ID="1100">
+          <!--AcMODEDESELECT-->
+        </action>
+      </transition>
+      <transition NAME="StYes" NEXT_STATE_ID="0" EVENT_ID="1004">
+        <action ID="1101">
+          <!--AcMODESELECT-->
+        </action>
+        <action ID="10">
+          <!--AcADDPOINT-->
+        </action>
+        <action ID="1100">
+          <!--AcMODEDESELECT-->
+        </action>
+      </transition>
+    </state>
+    
+    <state name="selected plane" ID="2" X_POS="903" Y_POS="38" WIDTH="100" HEIGHT="50">
+      <transition NAME="StNo" NEXT_STATE_ID="0" EVENT_ID="1003">
+        <action ID="1100">
+          <!--AcMODEDESELECT-->
+        </action>
+      </transition>
+      <transition NAME="StYes" NEXT_STATE_ID="0" EVENT_ID="1004">
+        <action ID="1101">
+          <!--AcMODESELECT-->
+        </action>
+        <action ID="69">
+          <!--AcSELECTSUBOBJECT-->
+        </action>
+        <action ID="1100">
+          <!--AcMODEDESELECT-->
+        </action>
+      </transition>
+    </state>
+    
+  </stateMachine>
+
+ <stateMachine NAME="SurfaceSelectInteractor">
+  
+    <state NAME="unselected" ID="0" START_STATE="TRUE" X_POS="17" Y_POS="23" WIDTH="100" HEIGHT="50">
+      <transition NAME="check selected mesh" NEXT_STATE_ID="1" EVENT_ID="3">
+        <action ID="30">
+          <!--AcCHECKELEMENT-->
+        </action>
+      </transition>
+      <transition NAME="check selected plane" NEXT_STATE_ID="2" EVENT_ID="2">
+        <action ID="31">
+          <!--AcCHECKOBJECT-->
+        </action>
+      </transition>
+    </state>
+    
+    <state name="selected mesh" ID="1" X_POS="903" Y_POS="38" WIDTH="100" HEIGHT="50">
+      <transition NAME="StNo" NEXT_STATE_ID="0" EVENT_ID="1003">
+        <action ID="1100">
+          <!--AcMODEDESELECT-->
+        </action>
+      </transition>
+      <transition NAME="StYes" NEXT_STATE_ID="0" EVENT_ID="1004">
+        <action ID="1101">
+          <!--AcMODESELECT-->
+        </action>
+        <action ID="10">
+          <!--AcADDPOINT-->
+        </action>
+        <action ID="1100">
+          <!--AcMODEDESELECT-->
+        </action>
+      </transition>
+    </state>
+  </stateMachine>
+
+  
+</mitkInteraktionStates>
+<!-- DOCUMENTATION -->
+<!-- This is StateMachine.xml. Includes Information about different StateMachines and Events. Used by EventMapper and StateMachineFactory -->
+<!-- ***WARNING*** do not use any &, % and so on in NAME. TODO "and so on" is not helpful at all! What is the problem with these chars?-->
+<!-- -->
+<!-- -->
+<!-- FAQ -->
+<!-- Question: the Application, that is loading this file doesn't act on the Interaction. Why? -->
+<!-- The QXMLFileLoader probably isn't able to load the file due to an error.-->
+<!-- Check the file for XML-Syntax like  "<" at beginning and "/>" at end -->
+

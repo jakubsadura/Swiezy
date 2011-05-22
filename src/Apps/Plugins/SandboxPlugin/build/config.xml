@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+# Copyright 2008 Pompeu Fabra University (Computational Imaging Laboratory), Barcelona, Spain.
+# Web: www.cilab.upf.edu
+# This software is distributed WITHOUT ANY WARRANTY;
+# without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Cruise Control project configuration file.
+-->
+
+<cruisecontrol>
+
+   <!-- 
+   \name SandboxPlugin
+   \brief Builds the SandboxPlugin.
+   -->
+   <project.default name="SandboxPlugin">
+
+      <!-- Properties -->
+      <property name="project.instance_name" value="sandboxPlugin"/>
+      <property name="project.type_src_folder" value="Apps/Plugins"/>
+      <property name="project.type_bin_folder" value="library"/>
+
+      <!-- Modificationset: triggers for rebuild -->
+      <modificationset>
+         <svn/>
+         <buildstatus logdir="${main.log_folder}/BaseLibAll"/>
+         <buildstatus logdir="${main.log_folder}/GuiBridgeLibAll"/>
+         <buildstatus logdir="${main.log_folder}/gmCore"/>
+      </modificationset>
+
+   </project.default>
+
+</cruisecontrol>

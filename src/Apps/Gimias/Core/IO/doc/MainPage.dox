@@ -1,0 +1,10 @@
+# Main page for the documentation of this library.
+
+/**
+
+\mainpage gmIO
+
+\section introduction_sec Introduction
+Description of the library.
+
+*/

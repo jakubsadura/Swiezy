@@ -1,0 +1,12 @@
+# Main page for the documentation of this library.
+
+/**
+
+\mainpage ManualSegmentationPlugin
+
+\section introduction_sec Introduction
+Description of the library.
+
+Manual segmentation interactor to create a mask image
+
+*/

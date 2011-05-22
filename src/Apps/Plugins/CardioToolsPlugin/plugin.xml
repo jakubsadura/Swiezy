@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<plugin name="CardioToolsPlugin">
+   <depends>
+        <plugin name="SignalViewerPlugin" />
+    </depends>
+</plugin>

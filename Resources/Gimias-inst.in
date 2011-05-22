@@ -1,0 +1,51 @@
+#!/bin/bash
+
+# Check if .gimias directory exists. If not, create it and install
+# a sample XML and Gimias DTD file to the .gimias directory.
+if [ ! -d ${HOME}/.gimias ]; then
+  mkdir ${HOME}/.gimias;
+fi
+
+if [ ! -f ${HOME}/.gimias/config.dtd ]; then
+
+  # Write the sample XML file to the .gimias directory.
+  cat > ${HOME}/.gimias/config.xml <<EOF
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE GIMIAS_Configuration PUBLIC "GIMIAS_Config_file" "config.dtd">
+<GIMIAS_Configuration>
+
+  <variable name="startedOnce">true</variable>
+
+  <profile>
+    <profileItem>Angio analysis</profileItem>
+    <profileItem>Cardiac Analysis</profileItem>
+    <profileItem>Common Functionalities</profileItem>
+    <profileItem>DICOM Interface</profileItem>
+    <profileItem>Example analysis</profileItem>
+  </profile>
+
+</GIMIAS_Configuration>
+
+EOF
+
+fi
+
+if [ ! -f ${HOME}/.gimias/config.dtd ]; then
+
+  # Put also the DTD file in the .gimias directory for convenience
+  cat > ${HOME}/.gimias/config.dtd <<EOF
+<!ELEMENT GIMIAS_Configuration (variable*, (profile | variable*))>
+<!ELEMENT variable (#PCDATA)>
+<!ATTLIST variable 
+      name ID #REQUIRED>
+<!ELEMENT profile (profileItem*)>
+<!ELEMENT profileItem (#PCDATA)>
+
+EOF
+
+fi
+
+
+export LD_LIBRARY_PATH=${PWD}/lib:$LD_LIBRARY_PATH
+
+exec ./gimias 1>/dev/null 2>&1

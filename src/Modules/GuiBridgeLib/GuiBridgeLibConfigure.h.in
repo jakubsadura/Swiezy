@@ -1,0 +1,17 @@
+/*
+ * here is where system computed values get stored these values should only
+ * change when the target compile platform changes
+ */
+
+
+#cmakedefine GUIBRIDGELIB_BUILD_SHARED_LIBS
+#ifdef GUIBRIDGELIB_BUILD_SHARED_LIBS
+#define GUIBRIDGELIBDLL
+#else
+#define GUIBRIDGELIBSTATIC
+#endif
+
+#cmakedefine GUIBRIDGELIB_BUILD_DEMOS
+#ifdef GUIBRIDGELIB_BUILD_DEMOS
+#define GUIBRIDGELIB_TESTING
+#endif

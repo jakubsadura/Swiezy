@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+# Copyright 2008 Pompeu Fabra University (Computational Imaging Laboratory), Barcelona, Spain.
+# Web: www.cilab.upf.edu
+# This software is distributed WITHOUT ANY WARRANTY;
+# without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Cruise Control project configuration file.
+-->
+
+<cruisecontrol>
+
+    <!-- 
+    \name MeshLib
+    \brief Builds the MeshLib library.
+    -->
+    <project.default name="MeshLib">
+
+        <!-- Properties -->
+        <property name="project.instance_name" value="meshLib"/>
+        <property name="project.type_src_folder" value="cilabModules"/>
+        <property name="project.type_bin_folder" value="library"/>
+
+        <!-- Bootstrappers are run every time the build runs, *before* the modification checks -->
+        <bootstrappers>
+            <svnbootstrapper/>
+            <svnbootstrapper localworkingcopy="${project.test_data_folder}"/>
+        </bootstrappers>
+
+        <!-- Modificationset: triggers for rebuild -->
+        <modificationset>
+            <svn/>
+            <svn localworkingcopy="${project.test_data_folder}"/>
+            <buildstatus logdir="${main.log_folder}/ThirdParty"/>
+            <buildstatus logdir="${main.log_folder}/BaseLibAll"/>
+        </modificationset>
+
+    </project.default>
+
+</cruisecontrol>

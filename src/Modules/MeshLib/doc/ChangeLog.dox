@@ -1,0 +1,135 @@
+/**
+
+\page ChangeLog Changes
+
+
+
+
+\section List_of_developers List of developers and nick names
+- <b> Constantine Butakoff </b>: cbutakoff
+- <b> Federico Sukno </b>: fsukno
+- <b> Sergio Andres Ruiz </b>: sandres
+- <b>  </b>: irano
+- <b>  </b>: agonzalez
+- <b>  </b>: spavani
+- <b>  </b>: vdialinos
+- <b>  </b>: sordas
+- <b> Xavi Planes </b>: xplanes
+
+This document has been created on 16-08-07
+
+
+
+
+***************************************************************************
+<HR> <h1> MeshLib Current version </h1>
+
+	- <b> Start Date </b>:	16-08-07
+	- <b> Finish Date </b>:	
+
+
+_________________________________________
+<h2> External libraries </h2>
+
+- \b BaseLibDICOM
+- \b Netgen 4.5
+- VTK 5.1
+
+_________________________________________
+<h2> BugFixes </h2> 
+
+- 17-12-07 xplanes
+	- Some local operations of meMeshImplVTK are not copying the output
+	to the output mesh parameter. This has been corrected.
+	- Corrected an error in meMesh::LoopSubdivisionRefiner( )
+	ConvertToMeshImplNetgenSTL( ); -> ConvertToMeshImplVTK( );
+
+- 04-12-07 xplanes
+	- There are memory leaks in meMeshImplVTK. 
+	  Added the calls to Delete( ) functions for all the filters
+
+_________________________________________
+<h2> Modifications </h2> 
+
+- 21-12-07 xplanes
+	- Removed the Data folder and added Data/CorrectOutput with different 
+	names
+	- Modified smlDemoCardiacAnalysis with the new Data folders
+
+- 18-12-07 xplanes
+	- Changed the name of the Applications to meApp...
+	and the name of the demos to meDemo...
+	- Modified some char* to const char*
+
+- 17-12-07 xplanes
+	- Added tests in meTestmeMesh:
+		- PROCESSING_TYPE_EDGE_SWAPPING
+		- PROCESSING_TYPE_LOCAL_REFINER
+		- PROCESSING_TYPE_LOOP_SUBDIVISION_REFINER
+		- PROCESSING_TYPE_EDGE_SWAPPING_LOCAL
+		- PROCESSING_TYPE_SMOOTHING_TAUBIN_LOCAL
+		- PROCESSING_TYPE_SMOOTHING_UMBRELLA_LOCAL
+		- PROCESSING_TYPE_EXTRACT_MAIN_CONNECTED_SURFACE 
+	- Changed the name of the test T5 to VolumeClosing
+	- Added Sphere.vtk and SphereWithText.vtk as Input data for testing
+	- Added some documentation in meMesh class
+	- Added parameters for VolumeClosing( )
+
+- 05-12-07 xplanes
+	- Changed the format of meTestmeMesh to the standard (one mesh for each
+	test)
+	- Added SelectCells( ) operation
+	- Added Cube.vtk data to test the selection
+	- Added meVTKExtractPolyDataGeometryCellsID
+	- Added GetSelectedCellList( )
+	- Added the test PROCESSING_TYPE_SELECT_CELLS in meTestmeMesh
+
+- 31-10-07 xplanes
+	- Added parameters for optimization
+
+- 25-10-07 xplanes
+	- Removed meshTest application
+	- Added meTestmeMesh demo
+	- Added some tests
+	- meMeshImplVTK::HoleFilling( ) use vtkCleanPolyData
+	- meMeshImplVTK::ExtractMainConnectedSurface( ) is correctly implemented
+
+- 24-10-07 xplanes
+	- Added meMesh::ConvertToMeshImplNetgenSTL( ) and 
+	meMesh::ConvertToMeshImplVTK( ) to change the implementation
+	- Added meMeshSmoothingParams
+	- Added meMesh::HoleFilling( )
+	- Added meMesh::ExtractMainConnectedSurface( )
+	- Added Test5 into meshTest.cc
+	- Added meMeshTypes.h
+
+- 28-09-07 xplanes
+	- Modified meshTest to add InputData class and refinement test
+	- Added refinement operation into meMesh class
+
+- 20-09-07 xplanes
+	- Modified the meshTestNetgen and the Data structure folders
+
+- 12-09-07 xplanes
+	- Modified Test8 in meshTestNetgen
+
+- 10-09-07 xplanes
+	- Added Test7 and Test8 to meshTestNetgen
+
+- 05-09-07 xplanes
+	- Moved some code from meMeshImpl to meMesh class
+	
+- 04-09-07 xplanes
+	- Created meMesh, meMeshFactory, meMeshImpl, meMeshImplNetgenSTL,
+	meMeshImplVTK, meMeshImplNetgen classes 
+	- Created two test applications meshTest and meshTestNetgen
+	- Created a Data for testing
+
+
+- 16-08-07 xplanes
+	- Created the first application to convert from VTK mesh to Netgen 
+	mesh to see the results compared to the STL geometry
+
+
+*/
+

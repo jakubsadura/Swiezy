@@ -1,0 +1,7 @@
+The Input directory contains data files that are used by the tests.
+
+The data is structured by folders: Cardio, Biometric, Angio, ...
+
+For each libmodule, the Data/CorrectOutput directory contains valid 
+output data created by tests. Output data of the current test are 
+compared with these valid output data during regression testing.

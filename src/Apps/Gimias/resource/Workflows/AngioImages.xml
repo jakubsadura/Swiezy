@@ -1,0 +1,124 @@
+<?xml version="0" ?>
+<Workflow name="AngioImages" version="0.0.0">
+    <RequiredPlugins>
+        <Item name="ImageToolsPlugin" />
+        <Item name="MeshEditorPlugin" />
+        <Item name="Plugin0" />
+    </RequiredPlugins>
+    <Step name="Visualize &amp; Crop">
+        <Windows>
+            <Item name="class Core::Widgets::WorkingAreaManager" />
+            <Item name="class Core::Widgets::DataEntityListBrowser" />
+            <Item name="class Core::Widgets::CommandPanel" />
+            <Item name="class Core::Widgets::WorkflowNavigationWidget" />
+            <Item name="class Core::Widgets::MovieToolbar" />
+            <Item name="class Core::Widgets::UserHelper" />
+            <Item name="class Core::Widgets::DataEntityInformation" />
+            <Item name="class Core::Widgets::MultiRenderWindowConfig" />
+            <Item name="class Core::Widgets::ProcessingToolboxWidget" />
+            <Item name="class Core::Widgets::SelectionToolboxWidget" />
+            <Item name="class Core::Widgets::VisualProperties" />
+            <Item name="class Core::Widgets::OrthoSliceWorkingArea" />
+            <Item name="class Core::Widgets::SideBySideWorkingArea" />
+            <Item name="class Core::Widgets::ToolbarIO" />
+            <Item name="class Core::Widgets::ToolbarMultiRenderWindow" />
+            <Item name="class Core::Widgets::ToolbarWorkingArea" />
+            <Item name="class Core::Widgets::ToolbarWindows" />
+            <Item name="class Core::Widgets::ToolbarAppearance" />
+            <Item name="class Core::Widgets::ToolbarSelectionTools" />
+            <Item name="class Core::Widgets::ToolbarLayout" />
+            <Item name="class Core::Widgets::SurfaceSelectorWidget" />
+        </Windows>
+        <Properties size="1">
+            <tag name="Layout" type="std::string">layout2|name=Working area;caption=Working area;state=12601340;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=20;besth=20;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Data tree;caption=Data tree;state=14682108;dir=2;layer=3;row=0;pos=0;prop=100000;bestw=310;besth=20;minw=310;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Command panel;caption=Command panel;state=14682110;dir=2;layer=3;row=0;pos=2;prop=100000;bestw=310;besth=20;minw=310;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Workflow Navigation;caption=Workflow Navigation;state=14682108;dir=2;layer=3;row=0;pos=1;prop=100000;bestw=310;besth=297;minw=310;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Time management;caption=Time management;state=14682110;dir=3;layer=0;row=0;pos=0;prop=100000;bestw=390;besth=46;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Helper;caption=Helper;state=14682110;dir=3;layer=0;row=0;pos=0;prop=100000;bestw=314;besth=96;minw=314;minh=96;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Data information;caption=Data information;state=14682110;dir=2;layer=3;row=0;pos=2;prop=100000;bestw=310;besth=96;minw=310;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Working Area configuration;caption=Working Area configuration;state=14682110;dir=2;layer=3;row=0;pos=2;prop=100000;bestw=310;besth=373;minw=310;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Tools Processor Widget;caption=Tools Processor Widget;state=14682110;dir=2;layer=3;row=0;pos=2;prop=100000;bestw=310;besth=60;minw=310;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Selection Toolbox;caption=Selection Toolbox;state=14682110;dir=2;layer=3;row=0;pos=2;prop=100000;bestw=310;besth=47;minw=310;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=VisualProperties;caption=VisualProperties;state=14682108;dir=2;layer=3;row=0;pos=2;prop=100000;bestw=310;besth=111;minw=310;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=IO Toolbar;caption=IO Toolbar;state=14691068;dir=1;layer=10;row=0;pos=0;prop=100000;bestw=93;besth=33;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=MultiRenderWindow Toolbar;caption=MultiRenderWindow Toolbar;state=14691068;dir=1;layer=10;row=0;pos=548;prop=100000;bestw=124;besth=33;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Working Area Toolbar;caption=Working Area Toolbar;state=14691068;dir=1;layer=10;row=0;pos=436;prop=100000;bestw=101;besth=33;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Windows Toolbar;caption=Windows Toolbar;state=14691068;dir=1;layer=10;row=0;pos=208;prop=100000;bestw=217;besth=33;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Appearance Toolbar;caption=Appearance Toolbar;state=14691070;dir=1;layer=10;row=0;pos=0;prop=100000;bestw=266;besth=33;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Selection Toolbar;caption=Selection Toolbar;state=14691068;dir=1;layer=10;row=0;pos=104;prop=100000;bestw=93;besth=33;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Layout Toolbar;caption=Layout Toolbar;state=14691070;dir=1;layer=10;row=0;pos=0;prop=100000;bestw=217;besth=33;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Surface;caption=Surface;state=14682110;dir=4;layer=0;row=0;pos=0;prop=100000;bestw=107;besth=192;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(5,0,0)=10|dock_size(2,3,0)=312|dock_size(1,10,0)=35|</tag>
+        </Properties>
+        <SubStep name="class ptCroppingWidget">
+            <Alternatives>
+                <Item name="class ptCroppingWidget" />
+            </Alternatives>
+        </SubStep>
+    </Step>
+    <Step name="Segment">
+        <Windows>
+            <Item name="class Core::Widgets::WorkingAreaManager" />
+            <Item name="class Core::Widgets::DataEntityListBrowser" />
+            <Item name="class Core::Widgets::CommandPanel" />
+            <Item name="class Core::Widgets::WorkflowNavigationWidget" />
+            <Item name="class Core::Widgets::MovieToolbar" />
+            <Item name="class Core::Widgets::UserHelper" />
+            <Item name="class Core::Widgets::DataEntityInformation" />
+            <Item name="class Core::Widgets::MultiRenderWindowConfig" />
+            <Item name="class Core::Widgets::ProcessingToolboxWidget" />
+            <Item name="class Core::Widgets::SelectionToolboxWidget" />
+            <Item name="class Core::Widgets::VisualProperties" />
+            <Item name="class Core::Widgets::OrthoSliceWorkingArea" />
+            <Item name="class Core::Widgets::SideBySideWorkingArea" />
+            <Item name="class Core::Widgets::CompareSlicesWorkingArea" />
+            <Item name="class Core::Widgets::MultiSliceWorkingArea" />
+            <Item name="class Core::Widgets::ToolbarIO" />
+            <Item name="class Core::Widgets::ToolbarMultiRenderWindow" />
+            <Item name="class Core::Widgets::ToolbarWorkingArea" />
+            <Item name="class Core::Widgets::ToolbarWindows" />
+            <Item name="class Core::Widgets::ToolbarAppearance" />
+            <Item name="class Core::Widgets::ToolbarSelectionTools" />
+            <Item name="class Core::Widgets::ToolbarLayout" />
+        </Windows>
+        <Properties size="1">
+            <tag name="Layout" type="std::string">layout2|name=Working area;caption=Working area;state=12601340;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=20;besth=20;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Data tree;caption=Data tree;state=14682108;dir=2;layer=3;row=0;pos=0;prop=100000;bestw=310;besth=20;minw=310;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Command panel;caption=Command panel;state=14682110;dir=2;layer=3;row=0;pos=2;prop=100000;bestw=310;besth=20;minw=310;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Workflow Navigation;caption=Workflow Navigation;state=14682108;dir=2;layer=3;row=0;pos=1;prop=100000;bestw=310;besth=297;minw=310;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Time management;caption=Time management;state=14682110;dir=3;layer=0;row=0;pos=0;prop=100000;bestw=390;besth=46;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Helper;caption=Helper;state=14682110;dir=3;layer=0;row=0;pos=0;prop=100000;bestw=314;besth=96;minw=314;minh=96;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Data information;caption=Data information;state=14682110;dir=2;layer=3;row=0;pos=2;prop=100000;bestw=310;besth=96;minw=310;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Working Area configuration;caption=Working Area configuration;state=14682110;dir=2;layer=3;row=0;pos=2;prop=100000;bestw=310;besth=373;minw=310;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Tools Processor Widget;caption=Tools Processor Widget;state=14682110;dir=2;layer=3;row=0;pos=2;prop=100000;bestw=310;besth=60;minw=310;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Selection Toolbox;caption=Selection Toolbox;state=14682110;dir=2;layer=3;row=0;pos=2;prop=100000;bestw=310;besth=47;minw=310;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=VisualProperties;caption=VisualProperties;state=14682110;dir=2;layer=3;row=0;pos=2;prop=100000;bestw=310;besth=111;minw=310;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=IO Toolbar;caption=IO Toolbar;state=14691068;dir=1;layer=10;row=0;pos=0;prop=100000;bestw=93;besth=33;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=MultiRenderWindow Toolbar;caption=MultiRenderWindow Toolbar;state=14691068;dir=1;layer=10;row=0;pos=610;prop=100000;bestw=124;besth=33;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Working Area Toolbar;caption=Working Area Toolbar;state=14691068;dir=1;layer=10;row=0;pos=436;prop=100000;bestw=163;besth=33;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Windows Toolbar;caption=Windows Toolbar;state=14691068;dir=1;layer=10;row=0;pos=208;prop=100000;bestw=217;besth=33;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Appearance Toolbar;caption=Appearance Toolbar;state=14691070;dir=1;layer=10;row=0;pos=0;prop=100000;bestw=266;besth=33;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Selection Toolbar;caption=Selection Toolbar;state=14691068;dir=1;layer=10;row=0;pos=104;prop=100000;bestw=93;besth=33;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Layout Toolbar;caption=Layout Toolbar;state=14691070;dir=1;layer=10;row=0;pos=0;prop=100000;bestw=217;besth=33;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(5,0,0)=10|dock_size(2,3,0)=312|dock_size(1,10,0)=10|</tag>
+        </Properties>
+        <SubStep name="class CandidateToolsPlugin::ThresholdSegmPanelWidget">
+            <Alternatives>
+                <Item name="class CandidateToolsPlugin::ThresholdSegmPanelWidget" />
+            </Alternatives>
+        </SubStep>
+    </Step>
+    <Step name="Edit Mesh">
+        <Windows>
+            <Item name="class Core::Widgets::WorkingAreaManager" />
+            <Item name="class Core::Widgets::DataEntityListBrowser" />
+            <Item name="class Core::Widgets::CommandPanel" />
+            <Item name="class Core::Widgets::WorkflowNavigationWidget" />
+            <Item name="class Core::Widgets::MovieToolbar" />
+            <Item name="class Core::Widgets::UserHelper" />
+            <Item name="class Core::Widgets::DataEntityInformation" />
+            <Item name="class Core::Widgets::MultiRenderWindowConfig" />
+            <Item name="class Core::Widgets::ProcessingToolboxWidget" />
+            <Item name="class Core::Widgets::SelectionToolboxWidget" />
+            <Item name="class Core::Widgets::VisualProperties" />
+            <Item name="class Core::Widgets::OrthoSliceWorkingArea" />
+            <Item name="class Core::Widgets::SideBySideWorkingArea" />
+            <Item name="class Core::Widgets::ToolbarIO" />
+            <Item name="class Core::Widgets::ToolbarMultiRenderWindow" />
+            <Item name="class Core::Widgets::ToolbarWorkingArea" />
+            <Item name="class Core::Widgets::ToolbarWindows" />
+            <Item name="class Core::Widgets::ToolbarAppearance" />
+            <Item name="class Core::Widgets::ToolbarSelectionTools" />
+            <Item name="class Core::Widgets::ToolbarLayout" />
+        </Windows>
+        <Properties size="3">
+            <tag name="Layout" type="std::string">layout2|name=Working area;caption=Working area;state=12601340;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=20;besth=20;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Data tree;caption=Data tree;state=14682108;dir=2;layer=3;row=0;pos=0;prop=100000;bestw=310;besth=20;minw=310;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Command panel;caption=Command panel;state=14682110;dir=2;layer=3;row=0;pos=2;prop=100000;bestw=310;besth=20;minw=310;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Workflow Navigation;caption=Workflow Navigation;state=14682108;dir=2;layer=3;row=0;pos=1;prop=100000;bestw=310;besth=297;minw=310;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Time management;caption=Time management;state=14682110;dir=3;layer=0;row=0;pos=0;prop=100000;bestw=390;besth=46;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Helper;caption=Helper;state=14682110;dir=3;layer=0;row=0;pos=0;prop=100000;bestw=314;besth=96;minw=314;minh=96;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Data information;caption=Data information;state=14682110;dir=2;layer=3;row=0;pos=2;prop=100000;bestw=310;besth=96;minw=310;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Working Area configuration;caption=Working Area configuration;state=14682110;dir=2;layer=3;row=0;pos=2;prop=100000;bestw=310;besth=373;minw=310;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Tools Processor Widget;caption=Tools Processor Widget;state=14682110;dir=2;layer=3;row=0;pos=2;prop=100000;bestw=310;besth=60;minw=310;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Selection Toolbox;caption=Selection Toolbox;state=14682110;dir=2;layer=3;row=0;pos=2;prop=100000;bestw=310;besth=47;minw=310;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=VisualProperties;caption=VisualProperties;state=14682108;dir=2;layer=3;row=0;pos=2;prop=100000;bestw=310;besth=111;minw=310;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=IO Toolbar;caption=IO Toolbar;state=14691068;dir=1;layer=10;row=0;pos=0;prop=100000;bestw=93;besth=33;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=MultiRenderWindow Toolbar;caption=MultiRenderWindow Toolbar;state=14691068;dir=1;layer=10;row=0;pos=548;prop=100000;bestw=124;besth=33;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Working Area Toolbar;caption=Working Area Toolbar;state=14691068;dir=1;layer=10;row=0;pos=436;prop=100000;bestw=101;besth=33;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Windows Toolbar;caption=Windows Toolbar;state=14691068;dir=1;layer=10;row=0;pos=208;prop=100000;bestw=217;besth=33;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Appearance Toolbar;caption=Appearance Toolbar;state=14691070;dir=1;layer=10;row=0;pos=0;prop=100000;bestw=266;besth=33;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Selection Toolbar;caption=Selection Toolbar;state=14691068;dir=1;layer=10;row=0;pos=104;prop=100000;bestw=93;besth=33;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Layout Toolbar;caption=Layout Toolbar;state=14691070;dir=1;layer=10;row=0;pos=0;prop=100000;bestw=217;besth=33;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(5,0,0)=10|dock_size(2,3,0)=446|dock_size(1,10,0)=35|</tag>
+            <tag name="MultiRenderWindowLayout" type="int">3</tag>
+            <tag name="EnableDisplayPlaneSubtree" type="bool">0</tag>
+        </Properties>
+        <SubStep name="class ptExtractMainSurfacePanelWidget">
+            <Alternatives>
+                <Item name="class ptExtractMainSurfacePanelWidget" />
+            </Alternatives>
+        </SubStep>
+        <SubStep name="class ptLoopSubdivisionPanelWidget">
+            <Alternatives>
+                <Item name="class ptLoopSubdivisionPanelWidget" />
+            </Alternatives>
+        </SubStep>
+        <SubStep name="class ptRingCutPanelWidget">
+            <Alternatives>
+                <Item name="class ptRingCutPanelWidget" />
+            </Alternatives>
+        </SubStep>
+        <SubStep name="class ptVolumeClosingPanelWidget">
+            <Alternatives>
+                <Item name="class ptVolumeClosingPanelWidget" />
+            </Alternatives>
+        </SubStep>
+    </Step>
+</Workflow>

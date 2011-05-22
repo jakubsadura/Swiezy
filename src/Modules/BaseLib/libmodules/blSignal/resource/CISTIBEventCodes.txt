@@ -1,0 +1,13 @@
+/*
+* Copyright (c) 2009,
+* Computational Image and Simulation Technologies in Biomedicine (CISTIB),
+* Universitat Pompeu Fabra (UPF), Barcelona, Spain. All rights reserved.
+* See license.txt file for details.
+*/
+### CISTIB Table of event codes. 
+
+0x0001	End-Systole
+0x0002	End-Diastole
+0x0003	Septal flash
+0x0004	
+0x0005	Free event

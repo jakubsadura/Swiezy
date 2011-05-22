@@ -1,0 +1,12 @@
+# Main page for the documentation of this library.
+
+/**
+
+\mainpage NeuroToolsPlugin
+
+\section introduction_sec Introduction
+Description of the library.
+
+Common tools for Neuro applications like ImageContrastWidget.
+
+*/

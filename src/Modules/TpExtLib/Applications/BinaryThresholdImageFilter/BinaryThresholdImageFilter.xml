@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<executable version="1.0" xmlns="http://slicer.org/module-description/1.0#">
+  <category>Filtering</category>
+  <title>Binary Threshold</title>
+  <description>
+This filter produces an output image whose pixels are either one of two values ( OutsideValue or InsideValue ), depending on whether the corresponding input image pixels lie between the two thresholds ( LowerThreshold and UpperThreshold ). Values equal to either threshold is considered to be between the thresholds.
+  </description>
+  <version>0.1.0.$Revision: 13030 $(alpha)</version>
+  <documentation-url></documentation-url>
+  <acknowledgements>This command module was derived from Insight/Examples (copyright) Insight Software Consortium</acknowledgements>
+  <license></license>
+  <contributor>Xavi Planes</contributor>
+
+  <parameters>
+    <label>Binary Threshold Parameters</label>
+    <description>Parameters for Binary Thresholding</description>
+
+    <integer>
+      <name>insideValue</name>
+      <longflag>--insideValue</longflag>
+      <description>The value assigned to pixels that are inside the computed threshold</description>
+      <label>Inside Value</label>
+      <default>1</default>
+    </integer>
+
+    <integer>
+      <name>outsideValue</name>
+      <longflag>--outsideValue</longflag>
+      <description>The value assigned to pixels that are outside the computed threshold</description>
+      <label>Outside Value</label>
+      <default>0</default>
+    </integer>
+
+    <double>
+      <name>lowerThreshold</name>
+      <longflag>--lowerThreshold</longflag>
+      <description></description>
+      <label>Lower Threshold</label>
+      <default>0</default>
+    </double>
+
+    <double>
+      <name>upperThreshold</name>
+      <longflag>--upperThreshold</longflag>
+      <description></description>
+      <label>Upper Threshold</label>
+      <default>255</default>
+    </double>
+
+
+  </parameters>
+
+  <parameters>
+    <label>IO</label>
+    <description>Input/output parameters</description>
+    
+    <image>
+      <name>inputVolume</name>
+      <label>Input Volume</label>
+      <channel>input</channel>
+      <index>0</index>
+      <description>Input volume to be filtered</description>
+    </image>
+
+    <image>
+      <name>outputVolume</name>
+      <label>Output Volume</label>
+      <channel>output</channel>
+      <index>1</index>
+      <description>Output filtered</description>
+    </image>
+  </parameters>
+
+</executable>

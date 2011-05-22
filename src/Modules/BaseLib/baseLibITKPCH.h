@@ -1,0 +1,124 @@
+/*
+* Copyright (c) 2009,
+* Computational Image and Simulation Technologies in Biomedicine (CISTIB),
+* Universitat Pompeu Fabra (UPF), Barcelona, Spain. All rights reserved.
+* See license.txt file for details.
+*/
+
+#ifndef baseLibITKPCH_h
+#define baseLibITKPCH_h
+
+#include "BaseLibWin32Header.h"
+#include "CILabAssertMacros.h"
+#include "CILabBoostMacros.h"
+#include "CILabExceptionMacros.h"
+#include "CILabNamespaceMacros.h"
+#include "blLightObject.h"
+#include "blMacro.h"
+#include "blSmartPointer.h"
+#include "boost/filesystem.hpp"
+#include "boost/intrusive_ptr.hpp"
+#include "boost/numeric/ublas/storage.hpp"
+#include "boost/numeric/ublas/vector.hpp"
+#include "boost/shared_ptr.hpp"
+#include "itkConstNeighborhoodIterator.h"
+#include "itkDataObject.h"
+#include "itkImage.h"
+#include "itkImageRegionIterator.h"
+#include "itkImageRegionIteratorWithIndex.h"
+#include "itkObject.h"
+#include "itkProcessObject.h"
+#include "itkRegionOfInterestImageFilter.h"
+#include "vnl/vnl_fastops.h"
+#include "vnl/vnl_vector.h"
+#include <algorithm>
+#include <blLightObject.h>
+#include <blMacro.h>
+#include <blSmartPointer.h>
+#include <boost/iterator/iterator_facade.hpp>
+#include <boost/numeric/ublas/blas.hpp>
+#include <boost/numeric/ublas/detail/matrix_assign.hpp>
+#include <boost/numeric/ublas/io.hpp>
+#include <boost/numeric/ublas/matrix_expression.hpp>
+#include <boost/numeric/ublas/operation.hpp>
+#include <boost/numeric/ublas/storage.hpp>
+#include <boost/numeric/ublas/vector.hpp>
+#include <cmath>
+#include <complex>
+#include <cstring>
+#include <exception>
+#include <float.h>
+#include <fstream>
+#include <iostream>
+#include <itkAddImageFilter.h>
+#include <itkCellInterface.h>
+#include <itkConstNeighborhoodIterator.h>
+#include <itkConstantBoundaryCondition.h>
+#include <itkCovariantVector.h>
+#include <itkExceptionObject.h>
+#include <itkGradientImageFilter.h>
+#include <itkGradientMagnitudeImageFilter.h>
+#include <itkImage.h>
+#include <itkImageBase.h>
+#include <itkImageFileReader.h>
+#include <itkImageFileWriter.h>
+#include <itkImageRegionIterator.h>
+#include <itkImageRegionIteratorWithIndex.h>
+#include <itkLineCell.h>
+#include <itkLinearInterpolateImageFunction.h>
+#include <itkMesh.h>
+#include <itkMultiplyImageFilter.h>
+#include <itkNeighborhood.h>
+#include <itkNeighborhoodIterator.h>
+#include <itkPoint.h>
+#include <itkPolygonCell.h>
+#include <itkQuadrilateralCell.h>
+#include <itkRGBPixel.h>
+#include <itkRecursiveGaussianImageFilter.h>
+#include <itkRecursiveMultiResolutionPyramidImageFilter.h>
+#include <itkRescaleIntensityImageFilter.h>
+#include <itkSize.h>
+#include <itkSmartPointer.h>
+#include <itkSquareImageFilter.h>
+#include <itkTriangleCell.h>
+#include <itkVTKImageIO.h>
+#include <itkXMLFile.h>
+#include <limits>
+#include <map>
+#include <math.h>
+#include <memory.h>
+#include <set>
+#include <sstream>
+#include <stdexcept>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string>
+#include <time.h>
+#include <utility>
+#include <v3p_netlib_mangle.h>
+#include <vcl_algorithm.h>
+#include <vector>
+#include <vnl/algo/vnl_determinant.h>
+#include <vnl/algo/vnl_matrix_inverse.h>
+#include <vnl/algo/vnl_netlib.h>
+#include <vnl/algo/vnl_qr.h>
+#include <vnl/algo/vnl_svd.h>
+#include <vnl/algo/vnl_svd_economy.h>
+#include <vnl/algo/vnl_symmetric_eigensystem.h>
+#include <vnl/vnl_c_vector.h>
+#include <vnl/vnl_c_vector.txx>
+#include <vnl/vnl_cross.h>
+#include <vnl/vnl_cross_product_matrix.h>
+#include <vnl/vnl_fastops.h>
+#include <vnl/vnl_fortran_copy.h>
+#include <vnl/vnl_matlab_filewrite.h>
+#include <vnl/vnl_matrix.h>
+#include <vnl/vnl_matrix_ref.h>
+#include <vnl/vnl_transpose.h>
+#include <vnl/vnl_vector.h>
+#include <vnl/vnl_vector.txx>
+#include <vnl/vnl_vector_fixed.h>
+#include <vnl/vnl_vector_ref.h>
+
+#endif // baseLibITKPCH_h
+

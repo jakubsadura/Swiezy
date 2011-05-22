@@ -1,0 +1,20 @@
+<!ELEMENT GIMIAS_Configuration 
+	(variable*, 
+		(profile | variable*), 
+		(MRUList | variable*),
+		(PluginConfiguration | variable*) 
+	)>
+<!ELEMENT variable (#PCDATA)>
+<!ATTLIST variable 
+      name ID #REQUIRED>
+<!ELEMENT profile (profileItem*)>
+<!ELEMENT profileItem (#PCDATA)>
+<!ELEMENT MRUList (MRUListItem*)>
+<!ELEMENT MRUListItem (#PCDATA)>
+<!ELEMENT PluginConfiguration (Plugin*)>
+<!ELEMENT Plugin (PluginName,PluginLayout,variable*)>
+<!ELEMENT PluginName (#PCDATA)>
+<!ELEMENT PluginLayout (#PCDATA)>
+<!ELEMENT PluginsScanFoldersDebug (ScanFolder*)>
+<!ELEMENT PluginsScanFoldersRelease (ScanFolder*)>
+<!ELEMENT ScanFolder (#PCDATA)>

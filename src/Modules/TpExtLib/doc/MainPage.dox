@@ -1,0 +1,140 @@
+/**
+
+\mainpage BaseLib
+
+\section introduction_sec Introduction
+
+Base library for all other libraries in the Toolkit. Provides base functionalities and algorithms.
+
+\section MainGoals_sec Main goals
+
+All classes and a short description will be put here to allow a quick
+search along the library functions.
+
+Utilities for:
+- \b blCommon: Memory management and strings
+	- blLightObject: Base class to use blSmartPointer
+	- blNewMacro: Macro for blLightObject
+	- blSmartPointer: Smart pointer (copy of itk::SmartPointer)
+	- blStringTokenizer: Tokenizer, which can break a string into tokens
+	- blTextProgressBar: Generates a progress bar in text mode
+	- blTimeString( ): Converts a time in sec. to a string
+- \b blDICOMImage: DICOM images
+	- blDICOMImageStack: Stack of parallel 2D-image slices
+	- blDICOMImageSet: Set of DICOM Image Slices
+	- blDICOMImageSetReader: Reader for blDICOMImageSet
+	- blDICOMImageStackReader: Reader for blDICOMImageStack
+	- blDICOMImageStudy: DICOM study, contains several series of images
+	- blDICOMImageStudyReader: Reader for blDICOMImageStudy
+	- blMultiFrameDICOMImageReader
+	- blDICOMDirReader: Read data from a DICOMDIR file
+	- blDICOMImage: DICOM image
+	- blDICOMImageReader: Reader for blDICOMImage
+	- blDICOMImageSeries: Series of dicom stacks
+	- blDICOMImageSeriesReader: Reads a series of dicom slices files and 
+	generates several stacks (blDICOMImageStack), wich correspond to 
+	different phases
+- \b blImage: Images utilities like plot lines, conversions, multi band images, ...
+	- blImageReader: Reader for blImages
+	- blImageWriter: Writer for blImages
+	- blIAMRSetReader: Loads list of images. Allows loading image for 
+	specified resolution.
+	- blIASetReader: Reads the i-th image from an image .lst set
+	- blImageConverter: Convert standard image formats (BMP, PNG, JPG, JP2)
+	to itk::Image format
+	- blImageFunctions (Line( ) and ZeroImage( ))
+	- blImageWithGradientBands
+	- blMBImageInFstBand: Multi-Band image
+	- blMultiBandImage
+- \b blImageProperties: IA images properties and ITK wrappers
+	- blIAFeaturesCalculator: Computes features images for OF-ASM algorithm
+	- blIAGradientComputation: Computation of all features of IA required 
+	on a given Hierarchy
+	- blIAMultiResolutionFilter: DEPRECATED. Wraps the 
+	itk::RecursiveMultiResolutionPyramidImageFilter. Don't use this class.
+	- blIAPrecomputation: Computation of all features of IA required on a 
+	given Hierarchy
+	- blIAPropertiesComputation: Implements computation of every property 
+	available in the module 
+	- blIARescalerFilter: Wraps the itk::RescaleIntensityImageFilter filter
+	- blIAMultiScaleFilter: Wraps the 
+	itk::RecursiveMultiResolutionPyramidImageFilter 
+- \b blImageUtilities: Image utilities
+	- blIASampler
+		- blIACircularSampler
+		- blIALinearSampler
+		- blIASquareSampler
+		- blIAMaskedSampler
+			- blIATriangularSampler
+		- blIA3DSampler
+			- blIA3DLinearSampler
+	- blIAImageVectorConverter: Extract nonmasked pixels into vector
+	- blIAWarp2DFilter: Image warping
+	- blImageMask: Mask for an image
+	- blGrid: NxN grid
+	- blIAGaussianWindow: Defines a gaussian window 
+	- blIAROI: Region Of Interest for images
+	- blNeighborhoodImageProduct: Calculates the pixel-wise product 
+	between the image and the mask.
+	- blAAMVisualizer: Visualization of the AAM results
+	- blWarp2DReferenceFrame: Reference frame for AAM warping
+	- blImageCollection: This class is an ITK container for a vector of 
+	images. It is used in blImage4DToVectorOfImage3DFilter.
+	- blImage4DToVectorOfImage3DFilter: This class splits a x,y,z,t image 
+	into a vector of n (x,y,z) images, where n is the number of time-points.
+- \b blMath: Mathematical elements 
+	- blMatrix: Matrix type, derived from vnl_matrix
+	- blMatrixRef: reference matrix type, similar to vnl_matrix_ref
+	- blVector: Vector type, derived from vnl_matrix
+	- blVectorRef: reference vector type, similar to vnl_vector_ref
+	- blSVD: May be sometime it will implement SVD. Now it's only pseudo 
+	inverse of the matrix based on SVD
+- \b blMatlabUtils: Utils for Matlab
+	- blMatlabReader: This implements reading from Matlab binary files
+- \b blPDAlignment: Shape utilities
+	- blAlignment
+	- blHomogeneous3DTransform: Homogenous transformation for 3D points
+	- blProjectiveAlignmentFilter: Projective alignment filter
+	- blSimilarity2DTransform: Similarity 2D transform 
+	- blProcrustesAlignmentFilter: Procrustes alignmen fFilter
+- \b blPDShape: Shape interface
+	- blDelaunay2D: 2D Delaunay triangulation
+	- blLandmarkGroup: group of landmarks
+	- blPDShape
+		- blPDShape2D: 2D blPDShape
+		- blPDShape3D: 3D blPDShape
+	- blPoint: 2D point for easy access to data
+	- blPDShapeInterface: common methods for a generic PDShape object
+	- blPDShapeReader: reader for blPDShape
+	- blPDShapeWriter: writer for blPDShape
+	- blPDSet: Point Distribution Set
+	- blPDSetReader: Reader for blPDSet
+- \b blUtilities: Utilities
+	- blConfigFileReader: Read values from a given file
+	- blHistogram: Generate 1D or 2D histograms
+	- blImageShapeWriter: Writes a shape on an image
+	- ToMatlab( ) and FromMatlab( ): Matlab IO functions
+	- blOrth: Vector orthogonalization functions
+	- blStringTokenizer: Tokenizer, which can break a string into tokens
+	- blXMLWriter: Generic XML writer for SMoLib with functionality for 
+	write tags with indentation
+	- blClock: High precision clock for Windows
+	- blSingleton: Template class for creating singleton objects
+	- blMatlabWriter: Output to Matlab binary files
+	- blTestParams: Basic parameters for testing
+	- blTestParamsFolderInfo: Info folder for blTestParams
+- \b blUtilitiesDicom: Utilities for DICOM
+	- blVTKHelperTools::blVTKImageSeries
+	- blVTKHelperTools::blVTKImageSet
+	- blVTKHelperTools::blVTKImageSlice
+	- blVTKHelperTools::blVTKImageStack
+	- blVTKHelperTools::blVTKImageStudy
+- \b blUtilitiesVTK: Utilities for VTK
+	- blVTKHelperTools
+	- blIALinearSampler3D
+	- blShapeUtils
+	- blVTKHelperTools::blVTKUtils: Static class with some utilities
+- \b blUtilitiesMITK: Utilities for MITK
+	- blPointSelectInteractor
+
+*/

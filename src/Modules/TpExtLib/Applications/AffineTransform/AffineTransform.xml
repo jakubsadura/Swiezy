@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<executable>
+  <category>Registration</category>
+  <title>Affine Transformation</title>
+  <description>
+	  Apply a affine transformation to an image
+</description>
+  <version>0.1.0.$Revision: 1.1 $(alpha)</version>
+  <license></license>
+
+  <parameters>
+    <label>Pre processing</label>
+    <region>
+      <name>region</name>
+      <longflag>region</longflag>
+      <flag>r</flag>
+      <label>Region</label>
+      <description>indexX indexY indexZ sizeX sizeY sizeZ userSpecifiedRegion for fixed image</description>
+      <default>0,0,0,0,0,0</default>
+    </region>
+    <double>
+      <name>sigma_smooth</name>
+      <longflag>sigma_smooth</longflag>
+      <flag>s</flag>
+      <label>Sigma</label>
+      <description>Sigma for the Gaussian filter</description>
+      <default>0</default>
+    </double>
+    <boolean>
+      <name>flaglowThreshFixed</name>
+      <longflag>flaglowThreshFixed</longflag>
+      <label>Low Thresh Fixed</label>
+      <default>false</default>
+    </boolean>
+    <float>
+      <name>lowThreshFixed</name>
+      <longflag>lowThreshFixed</longflag>
+      <label>lowThreshFixed</label>
+      <description>Pixels below this intensity are ignored for metric computation</description>
+      <default>0</default>
+    </float>
+    <boolean>
+      <name>flaghighThreshFixed</name>
+      <longflag>flaghighThreshFixed</longflag>
+      <label>High Thresh Fixed</label>
+      <default>false</default>
+    </boolean>
+    <float>
+      <name>highThreshFixed</name>
+      <longflag>highThreshFixed</longflag>
+      <label>highThreshFixed</label>
+      <description>Pixels above this intensity are ignored for metric computation</description>
+      <default>0</default>
+    </float>
+    <boolean>
+      <name>flaglowThreshMoving</name>
+      <longflag>flaglowThreshMoving</longflag>
+      <label>Low Thresh Moving</label>
+      <default>false</default>
+    </boolean>
+    <float>
+      <name>lowThreshMoving</name>
+      <longflag>lowThreshMoving</longflag>
+      <label>lowThreshMoving</label>
+      <description>Pixels below this intensity are ignored for metric computation</description>
+      <default>0</default>
+    </float>
+    <boolean>
+      <name>flaghighThreshMoving</name>
+      <longflag>flaghighThreshMoving</longflag>
+      <label>High Thresh Moving</label>
+      <default>false</default>
+    </boolean>
+    <float>
+      <name>highThreshMoving</name>
+      <longflag>highThreshMoving</longflag>
+      <label>highThreshMoving</label>
+      <description>Pixels above this intensity are ignored for metric computation</description>
+      <default>0</default>
+    </float>
+  </parameters>
+  
+  <parameters>
+    <label>Registration</label>
+    <boolean>
+      <name>initializeTrans</name>
+      <longflag>initializeTrans</longflag>
+      <flag>t</flag>
+      <label>initializeTrans</label>
+      <description>Initialize the transform using CenteredTransformInitializer</description>
+      <default>false</default>
+    </boolean>
+    <integer>
+      <name>nb_Itr</name>
+      <longflag>nb_Itr</longflag>
+      <label>Num of iterations</label>
+      <description>Num of iterations</description>
+      <default>100</default>
+    </integer>
+    <float>
+      <name>nb_maxSteplng</name>
+      <longflag>nb_maxSteplng</longflag>
+      <label>nb_maxSteplng</label>
+      <description>Maximum step length> The initial step length</description>
+      <default>0.5</default>
+    </float>
+    <float>
+      <name>nb_minSteplng</name>
+      <longflag>nb_minSteplng</longflag>
+      <label>nb_minSteplng</label>
+      <description>Minimum step length> The tolerance for convergence</description>
+      <default>0.0001</default>
+    </float>
+    <integer>
+      <name>nb_Bins</name>
+      <longflag>nb_Bins</longflag>
+      <label>Num of bins</label>
+      <description>Number of histogram bins</description>
+      <default>64</default>
+    </integer>
+    <integer>
+      <name>frac_S</name>
+      <longflag>frac_S</longflag>
+      <label>Fraction of samples</label>
+      <description>Fraction of samples</description>
+      <default>100</default>
+    </integer>
+    <float>
+      <name>paddingValue</name>
+      <longflag>paddingValue</longflag>
+      <label>paddingValue</label>
+      <description>Default pixel value</description>
+      <default>0</default>
+    </float>
+    <boolean>
+      <name>add_observer</name>
+      <longflag>add_observer</longflag>
+      <label>add_observer</label>
+      <description>show registration outputs</description>
+      <default>true</default>
+    </boolean>
+  </parameters>
+  
+  <parameters>
+    <label>IO</label>
+    <description>Input/output parameters</description>
+    <image>
+      <name>fixedImageFileName</name>
+      <label>Fixed Image</label>
+      <channel>input</channel>
+      <index>0</index>
+      <description>Fixed Image</description>
+    </image>
+    <image>
+      <name>movingImageFileName</name>
+      <label>Moving Image</label>
+      <channel>input</channel>
+      <index>1</index>
+      <description>Moving Image</description>
+    </image>
+    <image>
+      <name>maskFileName</name>
+      <longflag>maskFileName</longflag>
+      <label>Mask Image</label>
+      <channel>input</channel>
+      <description>Mask Image</description>
+    </image>
+    <image>
+      <name>outputImage</name>
+      <longflag>outputImage</longflag>
+      <label>Output Image</label>
+      <channel>output</channel>
+      <description>Output Image</description>
+    </image>
+    <transform fileExtensions=".dof" reference="movingImageFileName">
+      <name>OutputTransform</name>
+      <longflag>outputtransform</longflag>
+      <description>Transform calculated that aligns the fixed and moving image. Maps positions from the fixed coordinate frame to the moving coordinate frame. Optional (specify an output transform or an output volume or both).</description>
+      <label>Output transform</label>
+      <channel>output</channel>
+    </transform>
+  </parameters>
+
+</executable>

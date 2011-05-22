@@ -1,0 +1,2 @@
+python D:\Users\Maarten\Code\ThirdParty\thirdParty\CXXTEST\CxxTest\cxxtestgen.py --error-printer -o D:\Users\Maarten\Code\Toolkit\source\cilabModules\GuiBridgeLib\libmodules\guiBridgeLibQt\Test\src\BridgeLibQtTest.cpp *.h
+pause

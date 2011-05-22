@@ -1,0 +1,13 @@
+# Main page for the documentation of this library.
+/**
+
+\mainpage WflLib
+
+\section intro_sec Introduction
+<em>Workflow Library.</em>
+
+\section det_sec Details
+\li Library maintainer: Xavi Planes (xplanes@cistib.upf.edu)
+\li Library license: Open Source
+
+*/

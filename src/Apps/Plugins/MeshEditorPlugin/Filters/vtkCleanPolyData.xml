@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<executable>
+  <category>Mesh processing</category>
+  <title>Clean PolyData</title>
+  <description>Clean polydata filter</description>
+  <version>1.0</version>
+  <documentation-url>http://noodle.med.yale.edu/vtk5/classvtkCleanPolyData.html</documentation-url>
+  <license></license>
+  <contributor>Xavi Planes</contributor>
+  <constructor>New</constructor>
+  <destructor>Delete</destructor>
+  <updateFunction>Update</updateFunction>
+  <dynamicLibrary>vtkGraphics</dynamicLibrary>
+  <hierarchy>vtkCleanPolyData,vtkPolyDataAlgorithm,vtkAlgorithm,vtkObject,vtkObjectBase</hierarchy>
+  
+  <parameters>
+  </parameters>
+  
+  <parameters>
+    <label>IO</label>
+    <description>Input/output parameters</description>
+    <geometry>
+      <name>InputMesh</name>
+      <label>InputMesh</label>
+      <dataType>vtkPolyData</dataType>
+      <channel>input</channel>
+      <index>0</index>
+    </geometry>
+    <geometry>
+      <name>OutputMesh</name>
+      <label>OutputMesh</label>
+      <dataType>vtkPolyData</dataType>
+      <channel>output</channel>
+      <index>1</index>
+    </geometry>
+  </parameters>
+
+</executable>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<executable>
+  <category>Segmentation</category>
+  <title>Marching cubes</title>
+  <description>
+	  Generate isosurface(s) from volume. vtkMarchingCubes is a filter that takes as input a volume (e.g., 3D structured point set) and generates on output one or more isosurfaces. One or more contour values must be specified to generate the isosurfaces. Alternatively, you can specify a min/max scalar range and the number of contours to generate a series of evenly spaced contour values.
+</description>
+  <version>0.1.0.$Revision: 1.1 $(alpha)</version>
+  <license></license>
+  <contributor>Xavi Planes</contributor>
+
+  <parameters>
+    <label>Marching cubes Parameters</label>
+    <boolean>
+      <name>ComputeNormals</name>
+      <longflag>--computeNormals</longflag>
+      <label>Compute Normals</label>
+      <default>false</default>
+      <description> Normal computation is fairly expensive in both time and storage. If the output data will be processed by filters that modify topology or geometry, it may be wise to turn Normals and Gradients off. </description>
+    </boolean>
+    <boolean>
+      <name>ComputeGradients</name>
+      <longflag>--computeGradients</longflag>
+      <label>Compute Gradients</label>
+      <default>false</default>
+    </boolean>
+    <boolean>
+      <name>ComputeScalars</name>
+      <longflag>--computeScalars</longflag>
+      <label>Compute Scalars</label>
+      <default>false</default>
+    </boolean>
+    <double>
+      <name>Value</name>
+      <longflag>--value</longflag>
+      <label>Value</label>
+      <default>0.5</default>
+      <description> Set a particular contour value at contour number 0. </description>
+    </double>
+  </parameters>
+
+
+  <parameters>
+    <label>IO</label>
+    <description>Input/output parameters</description>
+    <image fileExtensions = ".vtk">
+      <name>inputVolume</name>
+      <label>Input volume</label>
+      <channel>input</channel>
+      <index>0</index>
+      <description>Input Image</description>
+    </image>
+    <geometry>
+      <name>outputMesh</name>
+      <label>Output Mesh</label>
+      <channel>output</channel>
+      <index>1</index>
+      <description>Output Mesh</description>
+    </geometry>
+  </parameters>
+
+</executable>

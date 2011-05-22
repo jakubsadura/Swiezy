@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<executable>
+  <category>Mesh processing</category>
+  <title>Manual Segmentation To Surface Filter</title>
+  <description>Supplies a 3D surface from pre-processed segmentation. The resulting surface depends on a filter pipeline based on vtkMedian (1) and a Gaussian filter with vtkImageGaussianSmooth (2). All voxel can be changed to an isotropic representation of the image (ATTANTION: the number of voxels in the will change). The resulting isotropic image has 1mm isotropic voxel by default. But can be varied freely. </description>
+  <version>1.0</version>
+  <documentation-url></documentation-url>
+  <license></license>
+  <contributor>Xavi Planes</contributor>
+  <constructor>New</constructor>
+  <updateFunction>Update</updateFunction>
+  <dynamicLibrary>mitkCoreExt</dynamicLibrary>
+  <hierarchy>mitk::ManualSegmentationToSurfaceFilter,mitk::ImageToSurfaceFilter,mitk::SurfaceSource,mitk::BaseProcess,itk::ProcessObject,itk::Object,itk::LightObject</hierarchy>
+
+  <parameters>
+    <label>Parameters</label>
+    <description>Parameters</description>
+
+    <boolean>
+      <name>MedianFilter3D</name>
+      <label>MedianFilter3D</label>
+      <default>false</default>
+    </boolean>
+
+    <boolean>
+      <name>Interpolation</name>
+      <label>Interpolation</label>
+      <default>false</default>
+    </boolean>
+    
+    <boolean>
+      <name>UseGaussianImageSmooth</name>
+      <label>UseGaussianImageSmooth</label>
+      <default>false</default>
+    </boolean>
+    
+    <double>
+      <name>GaussianStandardDeviation</name>
+      <label>GaussianStandardDeviation</label>
+      <default>1.5</default>
+    </double>
+
+  </parameters>
+
+  <parameters>
+    <label>Image filter</label>
+    <description>Image filter</description>
+
+    <boolean>
+      <name>Smooth</name>
+      <label>Smooth</label>
+      <default>false</default>
+    </boolean>
+
+    <integer>
+      <name>SmoothIteration</name>
+      <label>SmoothIteration</label>
+      <default>50</default>
+    </integer>
+
+    <float>
+      <name>SmoothRelaxation</name>
+      <label>SmoothRelaxation</label>
+      <default>0.1</default>
+    </float>
+
+    <float>
+      <name>TargetReduction</name>
+      <label>TargetReduction</label>
+      <default>0.95</default>
+    </float>
+
+    <float>
+      <name>Threshold</name>
+      <label>Threshold</label>
+      <default>1.0</default>
+    </float>
+
+    <string-enumeration>
+      <name>Decimation</name>
+      <description>Decimation choices</description>
+      <default>NoDecimation</default>
+      <label>Orientation</label>
+        <element>NoDecimation</element>
+        <element>DecimatePro</element>
+    </string-enumeration>
+    
+  </parameters>
+
+  <parameters>
+    <label>IO</label>
+    <description>Input/output parameters</description>
+    <image>
+      <name>InputImage</name>
+      <label>InputImage</label>
+      <dataType>mitk::Image</dataType>
+      <channel>input</channel>
+      <index>0</index>
+    </image>
+    <geometry>
+      <name>OutputSurface</name>
+      <label>OutputSurface</label>
+      <dataType>mitk::Surface</dataType>
+      <channel>output</channel>
+      <index>1</index>
+    </geometry>
+  </parameters>
+
+</executable>

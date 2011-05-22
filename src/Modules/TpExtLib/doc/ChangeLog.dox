@@ -1,0 +1,246 @@
+/**
+
+\page ChangeLog Changes
+
+\section List_of_developers List of developers and nick names
+- <b> Constantine Butakoff </b>: cbutakoff
+- <b> Federico Sukno </b>: fsukno
+- <b> Sergio Andres Ruiz </b>: sandres
+- <b>  </b>: irano
+- <b>  </b>: agonzalez
+- <b>  </b>: spavani
+- <b>  </b>: vdialinos
+- <b>  </b>: sordas
+- <b> Xavi Planes </b>: xplanes
+
+This document has been created on 31-05-07
+
+***************************************************************************
+<HR> <h1> BaseLib Current Version </h1>
+
+  - <b> Start Date </b>:  01-10-07
+  - <b> Finish Date </b>:  
+
+
+_________________________________________
+<h2> External libraries </h2>
+
+- \b ITK 
+
+_________________________________________
+<h2> BugFixes </h2> 
+
+- 17-01-08 xplanes
+  - There's a bug in ShapeUtils::GetShapeSubpart( )
+  In 20/12/07, it has been modified so, if the number of points is 0,
+  the empty polydata is returned. In the older version, the return value
+  was NULL. I changed to the older version because some calls are 
+  using this convetion.
+
+
+_________________________________________
+<h2> Modifications </h2> 
+
+- 16-05-08 xplanes
+  - Added the function CompareImages( )
+
+- 07-04-08 xplanes
+  - Modified blPointSelectInteractor. Uses bounding box when the user
+  press right mouse button
+
+- 02-04-08 xplanes
+  - Protected ShapeUtils::GetTangentVector( ) if iPoint < 0
+
+- 27-03-08 xplanes
+  - Added a new Line( ) function to draw a line in the image, 
+  using the line width
+
+- 19-03-08 xplanes
+  - blPointSelectInteractor uses a bounding box to change the state
+  at selected
+
+- 18-03-08 xplanes
+  - Improved point picking in blPointSelectInteractor 
+  for selecting a point of the skeleton
+
+- 12-02-08 xplanes
+  - Added blShapeUtils::ShapeUtils::GetNeighborPoints( ) and 
+  blShapeUtils::ShapeUtils::GetTangentVector( )
+  - Added blAppPointSelectInteractor
+  - Added libmodule blUtilitiesMITK
+  - Added blPointSelectInteractor 
+
+- 01-02-08 xplanes
+  - Improved ShapeUtils::CompareShapes( ) when the number of points is
+  different, shows a message
+
+- 21-12-07 xplanes
+  - Added TOOLKIT_DATA_ROOT and STR_PATH_TEMPORARY to BaseLibConfigure.h.in
+  - Added iTestNum to blTestParams and updated documentation
+  - Changed the blTestParamsFolderInfo::Initialize( )
+
+- 20-12-07 xplanes
+  - Fixed some warnings in linux
+
+- 18-12-07 xplanes
+  - Changed blTestParams parameters from char* to const char*
+  - Added blClockImpl, blClockWin32, blClockLinux. Modified
+  blClock to use the correct implementation depending on the
+  platform: Linux or Win32
+  - Corrected order of the libraries and changed #include <vnl\vnl_vector.h>
+  to #include <vnl/vnl_vector.h>
+
+- 17-12-07 xplanes
+  - Corrected a bug in Linux in blShapeUtils.txx
+
+- 14-12-07 xplanes
+  - Added blClockInfo
+
+- 05-12-07 xplanes
+  - Added blVTKSmartPointer 
+  - Added blShapeUtils::Convert( ) to convert from blPDShape to 
+  vtkPolyData and viceversa
+  - Added ShapeUtils::CompareShapes( ) with filenames
+  
+- 05-12-07 xplanes
+  - Changed default value of fEpsilon for CompareShapes( )
+
+- 27-11-07 xplanes
+  - Added blAlignment::TranslateShape2DTo( )
+
+- 26-11-07 xplanes
+  - Modified blTestParams to use an index to concat with the input file 
+  name
+
+- 23-11-07 xplanes
+  - Added blTimeString( ) to blTextUtils
+
+- 13-11-07 xplanes
+  - Added ShapeUtils::CompareVtkCellArray( ) and ShapeUtils::CompareShapes( )
+
+- 12-11-07 mnieber
+  - I added file blImage4DToVectorOfImage3DFilter.h with a new filter 
+  to BaseLibItk.
+  - In addition, I created a unit test project BaseLibITKTestRunner in 
+  BaseLib/demos. The unit test contains a single test for 
+  blImage4DToVectorOfImage3DFilter.
+
+- 02-11-07 xplanes
+  - Added blPDShape::Compare( )
+
+- 31-10-07 xplanes
+  - Added blAlignment::ComputeBoundingBox( ) and 
+  blAlignment::MoveShape2DTo( )
+
+- 26-10-07 xplanes
+  - Created a new module blUtilitiesDicom. Splitted from file 
+  blVTKHelperTools.h to a different file for each class.
+  - Created a file for VTKUtils class (this class was in the file
+  blVTKHelperTools.h)
+  - Created a new module BaseLibVTK, splitted from the old
+  BaseLibDICOM, that will only use VTK
+
+- 25-10-07 xplanes
+  - Added blTestParams and blTestParamsFolderInfo in blUtilities
+  - Added ShapeUtils::CheckSaveFileExtension( )
+
+- 19-10-07 xplanes
+  - Added blVector interface to blPDShape 
+
+- 17-10-07 xplanes
+  - Added some classes into groups
+
+- 16-10-07 xplanes
+  - Documented some functions in MainPage.dox and added some
+  classes into groups
+  - blConfigFileReader::GetValue( ) added a new parameter
+  bRemoveLastCRCharacter because in Linux, the CR is not removed
+
+
+
+
+***************************************************************************
+<HR> <h1> BaseLib beta_1_7_4 </h1>
+
+  - <b> Start Date </b>:  12-06-07
+  - <b> Finish Date </b>:  01-10-07
+
+
+_________________________________________
+<h2> External libraries </h2>
+
+- \b ITK 3.2
+
+_________________________________________
+<h2> BugFixes </h2> 
+
+
+
+_________________________________________
+<h2> Modifications </h2> 
+
+- 04-09-07 xplanes
+  - Added blSingleton class
+
+- 24-07-07 xplanes:
+  - Added BaseLibITK package in CMake. This only needs ITK
+  - Added blUtilitiesVTK module in BaseLibDicom, needs VTK and blDicom
+
+- 18-06-07 xplanes: 
+  - Changed the names of the doc files and the format
+
+
+
+
+
+***************************************************************************
+<HR> <h1> BaseLib 1.00 </h1>
+
+  - <b> Start Date </b>:  31-05-07
+  - <b> Finish Date </b>:  12-06-07
+
+
+_________________________________________
+<h2> External libraries </h2>
+
+- \b ITK 3.2
+
+_________________________________________
+<h2> BugFixes </h2> 
+
+
+
+_________________________________________
+<h2> Modifications </h2> 
+
+- 01-06-07  xplanes: 
+  - The file libmodules/blMath/include/blSVD.h has this include: #include <vnl/algo/vnl_netlib.h>. 
+  This file has this include: #include <v3p_netlib.h>.
+  So we need to include this directory into the CMakeLists.txt:
+  \code
+  SET(VXL_NETLIB_INCLUDE_DIR ${ITK_SOURCE_DIR}/Utilities/vxl/v3p/netlib)  
+  INCLUDE_DIRECTORIES( ${VXL_NETLIB_INCLUDE_DIR} )
+  \endcode
+  The macro macro(p, T) also needs to know what is ssvdc_, so I put: #include <v3p_netlib_mangle.h>
+
+- 31-05-07  xplanes: 
+  - CVS/BaseLib and cvs_toolkit/cilabModules/BaseLib/ files compared.
+  Changes in files CVS/BaseLib are more important, so I will commit these files:
+    - blPDShape/blPDShape.h
+    - blPDAlignment/blAlignment.cpp
+    - blPDAlignment/blProcrustesAlignmentFilter.cpp
+    - blPDAlignment/blProcrustesAlignmentFilter.h
+    - blMath/blMath.cpp
+    - blMath/blMath.h
+    - blImageUtilities/blIAImageVectorConverter.h
+    - Some other files cannot be put here...
+  - Removed #include <jasper/jasper.h> from blImage/blImageConverter.cpp
+    and the JPG_ImageInMemoryToBlImage function
+  This function was specficically implemented for the ITA company
+  - Document files created
+
+
+
+
+*/
+

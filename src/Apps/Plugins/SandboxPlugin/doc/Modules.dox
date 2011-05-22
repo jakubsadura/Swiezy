@@ -1,0 +1,12 @@
+
+/**
+
+\defgroup SandboxPlugin SandboxPlugin
+\ingroup Plugins
+\brief The SandboxPlugin is a plugin intended for new developers that want to 
+create a new plugin in Gimias. 
+\image html SandBoxPlugin.jpg "SandboxPlugin class diagram"
+
+
+*/
+

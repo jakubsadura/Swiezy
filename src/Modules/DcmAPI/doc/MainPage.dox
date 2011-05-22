@@ -1,0 +1,32 @@
+# Main page for the documentation of this library.
+/**
+
+\mainpage DcmAPI
+
+\section intro_sec Introduction
+This library is used for reading DICOM files, folders, DIRS...
+
+The DICOM data structure can be modeled as a hierarchy tree which levels are:
+	   
+dcmAPI::DataSet > dcmAPI::Patient > dcmAPI::Study > dcmAPI::Series > dcmAPI::TimePoint > dcmAPI::Slice
+
+In order to get this information from a file/folder, use the dcmAPI::DataSetReader using the appropriate read method.
+Starting from the Patient level, you can browse each level using the [level]::[sublevel]Ids method 
+([sublevel] for the name of the sub level, 
+for example dcmAPI::Study::SeriesIds) and the [level]::[sublevel] method (for example dcmAPI::Study::Series()).
+
+There are two kinds or readers:
+- those who give access to the data set (as seen above): the \ref dset_readers
+- those who give aceess to image data: the \ref img_readers
+
+\section det_sec Details
+\li Library maintainer: Yves Martelli (ymartelli@cistib.upf.edu)
+\li Library license: Open Source
+
+\section dep_sec Dependencies
+<em>The dependencies of the library.</em>
+
+\section chg_sec Change Log
+<em>The main changes that happend to the library.</em>
+
+*/

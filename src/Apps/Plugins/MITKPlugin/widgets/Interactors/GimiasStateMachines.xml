@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mitkInteraktionStates xmlns="http://tempuri.org/StateMachine.xsd" STYLE="User001">
+  <stateMachine NAME="StateMachines" />
+  <stateMachine NAME="CardiacCorrections">
+    <state NAME="Idle" ID="1" START_STATE="TRUE" X_POS="36" Y_POS="449" WIDTH="100" HEIGHT="50">
+      <transition NAME="name" EVENT_ID="1" NEXT_STATE_ID="5">
+        <action ID="4" />
+      </transition>
+      <transition NAME="name" EVENT_ID="2" NEXT_STATE_ID="5">
+        <action ID="4" />
+      </transition>
+    </state>
+    <state NAME="Wainting user interaction" ID="2" X_POS="575" Y_POS="232" WIDTH="154" HEIGHT="50">
+      <transition NAME="name" EVENT_ID="2" NEXT_STATE_ID="5">
+        <action ID="4" />
+      </transition>
+      <transition NAME="name" EVENT_ID="3" NEXT_STATE_ID="6">
+        <action ID="2" />
+      </transition>
+      <transition NAME="name" EVENT_ID="12" NEXT_STATE_ID="4">
+        <action ID="11" />
+      </transition>
+      <transition NAME="name" EVENT_ID="13" NEXT_STATE_ID="8">
+        <action ID="12" />
+      </transition>
+      <transition NAME="name" EVENT_ID="9" NEXT_STATE_ID="9">
+        <action ID="10" />
+      </transition>
+      <transition NAME="name" EVENT_ID="4" NEXT_STATE_ID="3">
+        <!--The user adds or moves a point-->
+        <action ID="15" />
+      </transition>
+    </state>
+    <state NAME="Moving point" ID="3" X_POS="793" Y_POS="49" WIDTH="100" HEIGHT="50">
+      <!--The user is moving a point-->
+      <transition NAME="name" EVENT_ID="4" NEXT_STATE_ID="7">
+        <action ID="13" />
+      </transition>
+    </state>
+    <state NAME="Undo" ID="4" X_POS="476" Y_POS="34" WIDTH="100" HEIGHT="50">
+      <transition NAME="name" EVENT_ID="14" NEXT_STATE_ID="2">
+        <!--The input is modified after Undo action-->
+      </transition>
+    </state>
+    <state NAME="Check interaction conditions" ID="5" X_POS="335" Y_POS="466" WIDTH="154" HEIGHT="50">
+      <transition NAME="name" EVENT_ID="11" NEXT_STATE_ID="1">
+        <action ID="2" />
+      </transition>
+      <transition NAME="name" EVENT_ID="10" NEXT_STATE_ID="11">
+        <action ID="3" />
+      </transition>
+    </state>
+    <state NAME="Disabled" ID="6" X_POS="55" Y_POS="268" WIDTH="100" HEIGHT="50">
+      <transition NAME="name" EVENT_ID="1" NEXT_STATE_ID="2">
+        <action ID="1" />
+      </transition>
+      <transition NAME="Move to IDLE because input is NULL" EVENT_ID="2" NEXT_STATE_ID="1">
+        <!--The input data entity has been changed to NULL-->
+      </transition>
+    </state>
+    <state NAME="Check moving point" ID="7" X_POS="895" Y_POS="232" WIDTH="146" HEIGHT="50">
+      <!--Check if the user is moving a point or finished the moving-->
+      <transition NAME="name" EVENT_ID="10" NEXT_STATE_ID="3">
+        <action ID="7" />
+      </transition>
+      <transition NAME="name" EVENT_ID="11" NEXT_STATE_ID="10">
+        <action ID="7" />
+        <action ID="14" />
+      </transition>
+    </state>
+    <state NAME="Apply model constraints" ID="8" X_POS="769" Y_POS="544" WIDTH="150" HEIGHT="50">
+      <transition NAME="name" EVENT_ID="14" NEXT_STATE_ID="2" />
+    </state>
+    <state NAME="TimeStep changed" ID="9" X_POS="175" Y_POS="63" WIDTH="100" HEIGHT="50">
+      <transition NAME="name" EVENT_ID="14" NEXT_STATE_ID="2" />
+    </state>
+    <state NAME="Movement finished" ID="10" X_POS="914" Y_POS="404" WIDTH="100" HEIGHT="50">
+      <!--This state allows to ignore the input modified event-->
+      <transition NAME="name" EVENT_ID="14" NEXT_STATE_ID="2" />
+    </state>
+    <state NAME="Reset interaction" ID="11" X_POS="601" Y_POS="452" WIDTH="100" HEIGHT="50">
+      <transition NAME="name" EVENT_ID="14" NEXT_STATE_ID="2">
+        <action ID="1" />
+      </transition>
+    </state>
+  </stateMachine>
+  <stateMachine NAME="CardiacInitialization">
+    <state NAME="Idle" ID="1" START_STATE="TRUE" X_POS="86" Y_POS="568" WIDTH="100" HEIGHT="50">
+      <transition NAME="name" EVENT_ID="1" NEXT_STATE_ID="4">
+        <action ID="4" />
+      </transition>
+    </state>
+    <state NAME="Landmark positioning" ID="2" X_POS="956" Y_POS="328" WIDTH="119" HEIGHT="50">
+      <!--The user is adding landmarks for one time step-->
+      <transition NAME="name" EVENT_ID="2" NEXT_STATE_ID="4">
+        <action ID="4" />
+      </transition>
+      <transition NAME="name" EVENT_ID="5" NEXT_STATE_ID="2">
+        <action ID="3" />
+      </transition>
+      <transition NAME="name" EVENT_ID="6" NEXT_STATE_ID="2">
+        <action ID="3" />
+        <action ID="1" />
+      </transition>
+      <transition NAME="name" EVENT_ID="3" NEXT_STATE_ID="7">
+        <action ID="2" />
+      </transition>
+      <transition NAME="name" EVENT_ID="9" NEXT_STATE_ID="8">
+        <action ID="10" />
+        <action ID="5" />
+      </transition>
+      <transition NAME="name" EVENT_ID="15" NEXT_STATE_ID="10">
+        <action ID="18" />
+      </transition>
+      <transition NAME="name" EVENT_ID="4" NEXT_STATE_ID="6">
+        <action ID="6" />
+        <action ID="5" />
+      </transition>
+    </state>
+    <state NAME="Model initialized" ID="3" X_POS="517" Y_POS="74" WIDTH="100" HEIGHT="50">
+      <transition NAME="name" EVENT_ID="3" NEXT_STATE_ID="5">
+        <action ID="2" />
+      </transition>
+      <transition NAME="name" EVENT_ID="5" NEXT_STATE_ID="2">
+        <action ID="3" />
+      </transition>
+      <transition NAME="name" EVENT_ID="9" NEXT_STATE_ID="8">
+        <action ID="10" />
+        <action ID="5" />
+      </transition>
+      <transition NAME="name" EVENT_ID="4" NEXT_STATE_ID="6">
+        <action ID="5" />
+      </transition>
+      <transition NAME="name" EVENT_ID="2" NEXT_STATE_ID="4">
+        <action ID="4" />
+      </transition>
+      <transition NAME="name" EVENT_ID="6" NEXT_STATE_ID="2">
+        <action ID="3" />
+        <action ID="1" />
+      </transition>
+    </state>
+    <state NAME="Check interaction conditions" ID="4" X_POS="392" Y_POS="459" WIDTH="179" HEIGHT="50">
+      <!--Check that input data is ok to start interaction-->
+      <transition NAME="name" EVENT_ID="11" NEXT_STATE_ID="1">
+        <action ID="2" />
+      </transition>
+      <transition NAME="name" EVENT_ID="10" NEXT_STATE_ID="9">
+        <!--Enable interactors and then update time step and go to the state landmark positioning or model initialized-->
+        <action ID="2" />
+        <action ID="1" />
+        <action ID="3" />
+        <action ID="10" />
+        <action ID="17" />
+      </transition>
+    </state>
+    <state NAME="Disabled Model Initialized" ID="5" X_POS="262" Y_POS="-126" WIDTH="172" HEIGHT="50">
+      <transition NAME="name" EVENT_ID="2" NEXT_STATE_ID="1">
+        <!--The input data entity has been changed to NULL-->
+      </transition>
+      <transition NAME="name" EVENT_ID="1" NEXT_STATE_ID="8">
+        <action ID="1" />
+        <action ID="10" />
+        <action ID="5" />
+      </transition>
+    </state>
+    <state NAME="Check number of landmarks" ID="6" X_POS="248" Y_POS="269" WIDTH="200" HEIGHT="50">
+      <!--Check that the number of landmarks is complete. if it is, go to model initialized state, else return back to landmark positioning-->
+      <transition NAME="name" EVENT_ID="10" NEXT_STATE_ID="3">
+        <action ID="7" />
+      </transition>
+      <transition NAME="name" EVENT_ID="11" NEXT_STATE_ID="2" />
+    </state>
+    <state NAME="Disabled Landmark positioning" ID="7" X_POS="968" Y_POS="521" WIDTH="180" HEIGHT="50">
+      <transition NAME="name" EVENT_ID="1" NEXT_STATE_ID="2">
+        <action ID="1" />
+      </transition>
+      <transition NAME="name" EVENT_ID="2" NEXT_STATE_ID="1">
+        <!--The input data entity has been changed to NULL-->
+        <action ID="2" />
+      </transition>
+    </state>
+    <state NAME="TimeStep changed" ID="8" X_POS="860" Y_POS="52" WIDTH="100" HEIGHT="50">
+      <!--Time step has changed, the current state can be model initialized or landmark positioning-->
+      <transition NAME="name" EVENT_ID="10" NEXT_STATE_ID="3" />
+      <transition NAME="name" EVENT_ID="11" NEXT_STATE_ID="2" />
+    </state>
+    <state NAME="ResetLandmarks" ID="9" X_POS="676" Y_POS="564" WIDTH="100" HEIGHT="50">
+      <transition NAME="name" EVENT_ID="14" NEXT_STATE_ID="2">
+        <!--Enable interactors and then update time step and go to the state landmark positioning or model initialized-->
+      </transition>
+    </state>
+    <state NAME="Check landmarks is not NULL" ID="10" X_POS="578" Y_POS="381" WIDTH="161" HEIGHT="50">
+      <transition NAME="name" EVENT_ID="11" NEXT_STATE_ID="6">
+        <action ID="6" />
+        <action ID="5" />
+      </transition>
+      <transition NAME="name" EVENT_ID="10" NEXT_STATE_ID="1">
+        <!--The landmarks has been changed to NULL-->
+        <action ID="2" />
+      </transition>
+    </state>
+  </stateMachine>
+</mitkInteraktionStates>
+

@@ -1,0 +1,5 @@
+/**
+\defgroup DicomPlugin DicomPlugin
+\ingroup Plugins
+\brief DicomPlugin
+*/

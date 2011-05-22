@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<executable>
+  <category>Image processing</category>
+  <title>Image To Surface Filter</title>
+  <description>Converts pixel data to surface data by using a threshold</description>
+  <version>1.0</version>
+  <documentation-url></documentation-url>
+  <license></license>
+  <contributor>Xavi Planes</contributor>
+  <constructor>New</constructor>
+  <updateFunction>Update</updateFunction>
+  <dynamicLibrary>mitkCoreExt</dynamicLibrary>
+  <hierarchy>mitk::ImageToSurfaceFilter,mitk::SurfaceSource,mitk::BaseProcess,itk::ProcessObject,itk::Object,itk::LightObject</hierarchy>
+
+  <parameters>
+    <label>Parameters</label>
+    <description>Parameters</description>
+
+    <integer>
+      <name>SmoothIteration</name>
+      <label>SmoothIteration</label>
+      <default>50</default>
+    </integer>
+    
+  </parameters>
+
+  <parameters>
+    <label>IO</label>
+    <description>Input/output parameters</description>
+    <image>
+      <name>InputImage</name>
+      <label>InputImage</label>
+      <dataType>mitk::Image</dataType>
+      <channel>input</channel>
+      <index>0</index>
+    </image>
+    <geometry>
+      <name>OutputSurface</name>
+      <label>OutputSurface</label>
+      <dataType>mitk::Surface</dataType>
+      <channel>output</channel>
+      <index>1</index>
+    </geometry>
+  </parameters>
+
+</executable>

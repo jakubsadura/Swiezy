@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mitkInteraktionEvents>
+  <events>
+    <eventCategory NAME="NullEvent">
+      <event NAME="EIDNULLEVENT" ID="0" />
+    </eventCategory>
+    <eventCategory NAME="PanelWidget">
+      <event NAME="EIDENABLEPANELWIDGET" ID="1">
+        <!--Enable panel widget-->
+      </event>
+      <event NAME="EIDINPUTDATAENTITYMODIFIED" ID="2">
+        <!--Input DataEntity of the panel widget has been modified-->
+      </event>
+      <event NAME="EIDDISABLEPANELWIDGET" ID="3">
+        <!--Panel widget has been disabled-->
+      </event>
+      <event NAME="EIDRESET" ID="5">
+        <!--Reset the panel widget to the initial state-->
+      </event>
+      <event NAME="EIDTIMECHANGED" ID="9">
+        <!--Current time step has been changed-->
+      </event>
+      <event NAME="EIDUNDO" ID="12">
+        <!--Undo last action-->
+      </event>
+    </eventCategory>
+    <eventCategory NAME="MitkInteractor">
+      <event NAME="EIDPOINTSMODIFIED" ID="4">
+        <!--Interactor points has been modified-->
+      </event>
+      <event NAME="EIDLOADLANDMARKS" ID="7">
+        <!--Load landmarks from file-->
+      </event>
+      <event NAME="EIDSAVELANDMARS" ID="8">
+        <!--Save landmarks to file-->
+      </event>
+      <event NAME="EIDNEWLANDMARKS" ID="15">
+        <!--Landmarks data entity has been changed-->
+      </event>
+    </eventCategory>
+    <eventCategory NAME="CardiacInitialization">
+      <event NAME="EIDCARDIACMODELCHANGED" ID="6">
+        <!--Cardiac model has been changed-->
+      </event>
+    </eventCategory>
+    <eventCategory NAME="InternalEvents">
+      <event NAME="EIDYES" ID="10">
+        <!--After checking something in some state, the result is yes-->
+      </event>
+      <event NAME="EIDNO" ID="11">
+        <!--After checking something in some state, the result is NO-->
+      </event>
+      <event NAME="EIDACTIONFINISHED" ID="14">
+        <!--Action has finished-->
+      </event>
+    </eventCategory>
+    <eventCategory NAME="CardiacCorrections">
+      <event NAME="EIDAPPLYMODELCONSTRAINTS" ID="13">
+        <!--Apply model constraints-->
+      </event>
+    </eventCategory>
+  </events>
+  <actions>
+    <actionCategory NAME="DoNothing">
+      <action NAME="AcDONOTHING" ID="0" />
+    </actionCategory>
+    <actionCategory NAME="PanelWidget">
+      <action NAME="AcENABLEINTERACTORS" ID="1">
+        <!--Enable interactors-->
+      </action>
+      <action NAME="AcDISABLEINTERACTORS" ID="2">
+        <!--Disable mitk::Interactors-->
+      </action>
+      <action NAME="AcRESETINTERACTORS" ID="3">
+        <!--Reset interactors to initial state, without points-->
+      </action>
+      <action NAME="AcCHECKINTERACTORCONDITIONS" ID="4">
+        <!--Check that the conditions for using interactions are ok-->
+      </action>
+      <action NAME="AcCHECKINTERACTORFULL" ID="5">
+        <!--Check that the interactor for adding landmarks is full-->
+      </action>
+      <action NAME="AcADDINTERACTORPOINTEXTRAINFO" ID="6">
+        <!--Add extra info to the interactor point-->
+      </action>
+      <action NAME="AcUPDATEPROCESSOR" ID="7">
+        <!--Call processor Update-->
+      </action>
+      <action NAME="AcUPDATETIMESTEP" ID="10">
+        <!--Update time step to the processor and interactors-->
+      </action>
+      <action NAME="AcUNDO" ID="11">
+        <!--Undo last action-->
+      </action>
+      <action NAME="AcUPDATENUMBEROFTIMESTEPS" ID="16">
+        <!--Update time step of the landmark points-->
+      </action>
+      <action NAME="AcACTIONSFINISHED" ID="17">
+        <!--The actions of one transition has been finished and we can go to the next state-->
+      </action>
+    </actionCategory>
+    <actionCategory NAME="CardiacCorrections">
+      <action NAME="AcAPPLYMODELCONSTRAINTS" ID="12">
+        <!--Apply model constraints-->
+      </action>
+    </actionCategory>
+    <actionCategory NAME="MitkInteractor">
+      <action NAME="AcLOADLANDMARKS" ID="8">
+        <!--Load the landmarks from file-->
+      </action>
+      <action NAME="AcSAVELANDMARKS" ID="9">
+        <!--Save landmarks to file-->
+      </action>
+      <action NAME="AcCHECKMOVINGPOINT" ID="13">
+        <!--User is moving a point of the interactor-->
+      </action>
+      <action NAME="AcSTARTMOVINGPOINT" ID="15">
+        <!--The user started moving a point-->
+      </action>
+      <action NAME="AcFINISHEDMOVINGPOINT" ID="14">
+        <!--The user finished moving a point-->
+      </action>
+      <action NAME="AcCHECKLANDMARKSNOTNULL" ID="18">
+        <!---->
+      </action>
+    </actionCategory>
+  </actions>
+</mitkInteraktionEvents>
+

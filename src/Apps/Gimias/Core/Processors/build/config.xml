@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+# Copyright 2008 Pompeu Fabra University (Computational Imaging Laboratory), Barcelona, Spain.
+# Web: www.cilab.upf.edu
+# This software is distributed WITHOUT ANY WARRANTY;
+# without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Cruise Control project configuration file.
+-->
+
+<cruisecontrol>
+
+   <!-- 
+   \name gmProcessors
+   \brief Builds the gmProcessors toolkit libraries.
+   -->
+   <project.default name="gmProcessors">
+
+      <!-- Properties -->
+      <property name="project.instance_name" value="gmProcessors"/>
+      <property name="project.type_src_folder" value="Apps/Gimias/Core/Processors"/>
+      <property name="project.type_bin_folder" value="library"/>
+      <property name="project.source_path" value="${main.toolkit_src_folder}/${project.type_src_folder}"/>
+      <property name="project.csn_file" value="${project.source_path}/csnGMProcessors.py"/>
+      <property name="project.doc_run_folder" value="${project.source_path}/doc"/>
+      <property name="project.doc_config_file" value="${project.source_path}/doc/Doxyfile.doxy"/>
+
+      <!-- Modificationset: triggers for rebuild -->
+      <modificationset>
+         <svn/>
+         <buildstatus logdir="${main.log_folder}/gmDataHandling"/>
+         <buildstatus logdir="${main.log_folder}/gmKernel"/>
+      </modificationset>
+
+   </project.default>
+
+</cruisecontrol>

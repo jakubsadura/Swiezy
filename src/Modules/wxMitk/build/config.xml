@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+# Copyright 2008 Pompeu Fabra University (Computational Imaging Laboratory), Barcelona, Spain.
+# Web: www.cilab.upf.edu
+# This software is distributed WITHOUT ANY WARRANTY;
+# without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Cruise Control project configuration file.
+-->
+
+<cruisecontrol>
+
+   <!-- 
+   \name WxMitk
+   \brief Builds the WxMitk library.
+   -->
+   <project.default name="WxMitk">
+      
+      <!-- Properties -->
+      <property name="project.instance_name" value="wxMitk"/>
+      <property name="project.type_src_folder" value="cilabModules"/>
+      <property name="project.type_bin_folder" value="library"/>
+      <property name="project.source_path" value="${main.toolkit_src_folder}/${project.type_src_folder}/wxMitk"/>
+      <property name="project.bin_folder" value="${main.toolkit_bin_folder}/${project.type_bin_folder}/wxMitk"/>
+      <property name="project.doc_run_folder" value="${project.source_path}/doc"/>
+      <property name="project.doc_config_file" value="${project.source_path}/doc/Doxyfile.doxy"/>
+
+      <!-- Modificationset: triggers for rebuild -->
+      <modificationset>
+         <svn/>
+         <buildstatus logdir="${main.log_folder}/BaseLibAll"/>
+         <buildstatus logdir="${main.log_folder}/ThirdParty"/>
+      </modificationset>
+
+      <!-- Schedule: configures the actual build loop, how often and which build file/target -->
+      <schedule>
+         <ant>
+            <!-- Non common property... -->
+            <property name="test_exec_name" value="${project.instance_name}Tests"/>
+         </ant>
+      </schedule>
+
+   </project.default>
+
+</cruisecontrol>

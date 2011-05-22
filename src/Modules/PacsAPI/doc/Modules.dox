@@ -1,0 +1,19 @@
+# Modules definition for this library.
+/**
+ 
+\defgroup PacsAPI PacsAPI
+\ingroup Libmodules
+\brief API for Accessing PACS servers
+
+\defgroup PacsAPIVerification Verification
+\ingroup PacsAPI
+\brief The module can be used to verify basic DICOM connectivity.
+
+\section PacsAPIVerification_Introduction Introduction
+This modules provides a method (TestConnectivity) that implements a Service Class User (SCU) for the Verification SOP Class.
+It sends a DICOM C-ECHO message to a Service Class Provider (SCP) and waits for a response. 
+The application can be used to verify basic DICOM connectivity.
+
+It is based on the ECHOSCU application of DCMTK: http://support.dcmtk.org/docs/echoscu.html
+
+*/

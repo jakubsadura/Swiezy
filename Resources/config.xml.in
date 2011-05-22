@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE GIMIAS_Configuration PUBLIC "GIMIAS_Config_file" "@GIMIAS_CONFIG_DTD_FILE@">
+<GIMIAS_Configuration>
+
+  <variable name="startedOnce">true</variable>
+
+  <profile>
+    <profileItem>Angio analysis</profileItem>
+    <profileItem>Cardiac Analysis</profileItem>
+    <profileItem>Common Functionalities</profileItem>
+    <profileItem>DICOM Interface</profileItem>
+    <profileItem>Example analysis</profileItem>
+  </profile>
+
+</GIMIAS_Configuration>

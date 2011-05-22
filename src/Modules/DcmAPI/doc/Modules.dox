@@ -1,0 +1,29 @@
+# Modules definition for this library.
+
+/**
+
+\defgroup dcmapi DcmAPI
+\brief Main library group.
+\ingroup Libmodules
+
+\defgroup data Data
+\brief Data representation group.
+\ingroup dcmapi
+
+\defgroup io IO
+\brief IO management group.
+\ingroup dcmapi
+
+\defgroup readers Readers
+\brief Readers group.
+\ingroup io
+
+\defgroup img_readers Image Readers
+\brief Image Readers group (allows access to image data).
+\ingroup readers
+
+\defgroup dset_readers DataSet Readers
+\brief DataSet Readers group (allows access to dcmAPI::DataSet).
+\ingroup readers
+
+*/

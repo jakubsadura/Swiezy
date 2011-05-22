@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+# Copyright 2008 Pompeu Fabra University (Computational Imaging Laboratory), Barcelona, Spain.
+# Web: www.cilab.upf.edu
+# This software is distributed WITHOUT ANY WARRANTY;
+# without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Cruise Control project configuration file.
+-->
+
+<cruisecontrol>
+
+    <!-- 
+    \name MeshLibApps
+    \brief Builds the MeshLib applications.
+    -->
+    <project.default name="MeshLibApps">
+
+        <!-- Properties -->
+        <property name="project.instance_name" value="meshLibApps"/>
+        <property name="project.type_src_folder" value="cilabModules"/>
+        <property name="project.type_bin_folder" value="library"/>
+        <property name="project.source_path" value="${main.toolkit_src_folder}/${project.type_src_folder}/MeshLib/applications"/>
+        <property name="project.csn_file" value="${main.toolkit_src_folder}/${project.type_src_folder}/MeshLib/csn${project.name}.py"/>
+        <property name="project.ant_target" value="${ant.compile_target}"/>
+
+        <!-- Modificationset: triggers for rebuild -->
+        <modificationset>
+            <buildstatus logdir="${main.log_folder}/MeshLib"/>
+        </modificationset>
+
+    </project.default>
+
+</cruisecontrol>

@@ -1,0 +1,95 @@
+
+/**
+
+
+\defgroup MeshLib MeshLib
+\ingroup Libmodules
+\brief MeshLib
+
+\section meMesh_Introduction Introduction
+
+A bridge pattern is used to implement the mesh functionalities because
+another external mesh library can be added in the future, and this 
+library will have another mesh representation. So we need to decouple the 
+mesh library from the rest of the system.
+
+"Decouple an abstraction from its implementation so that the two can vary 
+independently" (Design Patterns-Elements of reusable OO software (GoF 1998))
+
+- meMesh is the Abstraction class: defines the abstraction's interface.
+- meMeshImpl is the Implementor class: defines the interface for 
+implementation classes
+- meMeshImplNetgen, meMeshImplNetgenSTL, meMeshImplVTK: implements the 
+Implementor interface and defines its concrete implementation
+
+
+\subsection meMesh_Introduction_Creation Creating the right Implementor object: 
+How, when, and where do you decide which Implementor class to
+instantiate when there's more than one?
+Answer: Choose a default implementation initially and change it later 
+according to usage. In the constructor, a initial VTK implementation is
+choosen. In the operation Optimize, the implementation meMeshImplNetgenSTL
+will be used and the results (meMeshImplNetgen) will be copied back to
+the initial implementation.
+
+
+
+\section meMesh_Usage Usage
+
+To use the meMesh, actually, the client must call: 
+\code 
+meMesh *pMesh = new meMesh( );
+
+pMesh->SetData( vtkShape );
+
+pMesh->Optimize( );
+
+pMesh->GetData( vtkShape );
+\endcode 
+
+
+
+\image html meMesh.bmp
+
+*/
+
+
+//------------------------------------------------------
+
+/**
+
+\defgroup meshLibApp meshLibApp
+\ingroup Applications
+\brief meshLibApp
+
+\defgroup meAppNetgen meAppNetgen
+\ingroup meshLibApp
+\brief meAppNetgen
+
+Sample usage of the Netgen mesh library
+
+
+\defgroup meAppTools meAppTools
+\ingroup meshLibApp
+\brief meAppTools
+
+Sample tools for testing meTools:
+- meAppHoleFilling
+- meAppJoin
+- meAppSplit
+
+*/
+
+
+
+
+/**
+
+\defgroup MeshLibTest MeshLibTest
+\ingroup Tests
+\brief MeshLibTest
+
+
+
+*/
+

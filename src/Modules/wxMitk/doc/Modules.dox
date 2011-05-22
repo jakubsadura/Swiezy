@@ -1,0 +1,21 @@
+/**
+
+\defgroup wxMitkTests wxMitkTests
+\ingroup Libmodules
+\brief wxMitkTests
+
+\defgroup wxMitk wxMitk
+\ingroup Libmodules
+
+\defgroup wxMitkCore wxMitkCore
+\ingroup Libmodules
+
+\defgroup wxMitkRendering wxMitkRendering
+\ingroup Libmodules
+
+\defgroup wxMitkWidgets wxMitkWidgets
+\ingroup Libmodules
+
+
+*/
+

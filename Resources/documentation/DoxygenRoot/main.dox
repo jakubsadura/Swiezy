@@ -1,0 +1,32 @@
+/**
+\mainpage
+
+\image html gimias_header.jpg
+
+\section intro Introduction
+GIMIAS stands for Graphical Interface for Medical Image Analysis 
+and Simulation.
+
+GIMIAS is a workflow-oriented environment for solving advanced 
+biomedical image computing and individualized simulation problems, 
+which is extensible through the development of problem-specific 
+plug-ins. In addition, GIMIAS provides an open source framework for 
+efficient development of research and clinical software prototypes 
+integrating contributions from the Physiome community while allowing 
+business-friendly technology transfer and commercial product development.
+
+GIMIAS is developed by the group for Computational Image and Simulation 
+Technologies in Biomedicine (CISTIB) at Universitat Pompeu Fabra (UPF), 
+Barcelona, Spain. 
+
+\section homepage Home Page
+The Home Page of GIMIAS can be found at: http://www.gimias.org
+
+\section howto How to use this documentation
+This documentation describes the classes of GIMIAS. The Modules link 
+presents a hierarchy of classes organized according to their 
+functionality. You can find an alphabetic list of the classes 
+under Classes > Class Index.
+
+*/
+

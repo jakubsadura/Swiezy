@@ -1,0 +1,98 @@
+/**
+
+\page ChangeLog_wxMitk Changes wxMitk
+
+
+
+
+\section List_of_developers List of developers and nick names
+- <b> Juan Antonio Moya </b>: jMoya
+- <b> Maarten Nieber </b>: mnieber
+- <b> Xavi Planes </b>: xplanes
+
+
+
+
+***************************************************************************
+<HR> <h1> EvoAPI Current version </h1>
+
+	- <b> Start Date </b>:	01-04-08
+	- <b> Finish Date </b>:	
+
+
+_________________________________________
+<h2> External libraries </h2>
+
+
+
+_________________________________________
+<h2> BugFixes </h2> 
+
+- 11-07-08 xplanes
+  - When releasing Shift+left mouse button, it's not processed corretly
+  by MITK. The event was created incorrectly using a wrong button state value
+
+- 13-06-08 xplanes
+  - When pressing Shift+left mouse button in the wxMitkRenderWindow
+  moves the current displayed object out of the window
+  The shift key event was handled and the position of the mouse
+  was sent to the interactor was (0,0). When the mouse button was
+  pressed, the difference between the current and the last position
+  was very large. Changed two functions to send the current mouse position
+  and disable auto repeat when a key is maintained in a pressed state:
+  - wxMitkRenderWindow::OnKeyPressEvent()
+  - wxMitkRenderWindow::OnKeyUpEvent()
+
+- 10-06-08 xplanes
+  - wxMitkRenderWindow::OnPaint() is not working. Fixed it
+  - Updated wxMitkRenderWindow::OnResize( ) with last changes in MITK
+  - Fixed a bug when visibility property is changed in the rendering tree
+  because the LOD is not updated correctly after changing this property.
+
+- 29-05-08 xplanes
+  - Crashes when setting an image inside the rendering tree and destroying the wxMitkRenderWindow
+  \code
+  wxMitkRenderWindow::~wxMitkRenderWindow(void).
+  this->m_Renderer = NULL;
+  \endcode
+
+- 14-05-08 xplanes
+  - Changed all constructors of wxColour from 
+  wxColour(const wxString& colourNname) to 
+  wxColour(unsigned char red, unsigned char green, unsigned char blue, unsigned char alpha=wxALPHA_OPAQUE) 
+  like for example wxColour(wxT("LIGHT STEEL BLUE")) to wxColour( 143, 143, 188)
+  because the old code produces memory leaks
+  - Changed from raw pointer to smart pointer some member
+  variables of wxMitkMultiRenderWindow
+  - Removed a memory leak in wxMitkRenderWindow::~wxMitkRenderWindow(void)
+  We need to call this->SetRenderWindow(NULL);
+  - Added the functions wxMitkApp::CleanUp() and wxMitkApp::OnExit(void)
+  to clean MITK static memory
+
+- 01-04-08 xplanes:
+  - The mitk interactors are not working in a mitk 3D View.
+  When the wxMitkRenderWindow creates the mitk::MouseEvent,
+  the 5th parameter must be always mitk::Key_unknown because
+  this is the way the events are defined in StateMachine.xml
+  You can also take a look at QmitkRenderWindow::mousePressEvent(QMouseEvent *me) 
+  \code
+  void wxMitkRenderWindow::OnMouseEvent(wxMouseEvent& event)
+  \endcode
+
+
+_________________________________________
+<h2> Modifications </h2> 
+
+- 14-05-08 xplanes
+  - Added wxMitkMemoryLeak to test memory leaks in a wxMitkApp
+
+- 07-04-08 xplanes:
+  - Added wxMitkToolBoxControl::OnSelectedItem( ) that will be called
+  when the user clicks on a item
+
+- 01-04-08 xplanes:
+  - Created this documentation
+
+
+*/
+

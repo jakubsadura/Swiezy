@@ -1,0 +1,18 @@
+/**
+
+\mainpage wxMitk
+
+\section wxMitk_introduction_sec Introduction
+
+This is the wxWidgets implementation of the MITK widgets and windows.
+MITK implements uses Qt library by default.
+
+
+
+*/
+
+
+
+
+
+

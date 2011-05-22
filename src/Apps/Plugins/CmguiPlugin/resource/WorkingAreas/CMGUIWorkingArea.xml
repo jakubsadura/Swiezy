@@ -1,0 +1,13 @@
+<?xml version="0" ?>
+<tagmap size="4">
+    <tag name="Size" type="unsigned int">1</tag>
+    <tag name="View0" type="class blSmartPointer&lt;class blTagMap&gt;">Unsupported value type
+        <tagmap size="3">
+            <tag name="Layer" type="int">1</tag>
+            <tag name="Row" type="int">0</tag>
+            <tag name="Factory" type="std::string">class CmguiPlugin::RenderWidget</tag>
+        </tagmap>
+    </tag>
+    <tag name="Name" type="std::string">CMGUIWorkingArea</tag>
+    <tag name="Icon" type="std::string">CMGUIWorkingArea.png</tag>
+</tagmap>

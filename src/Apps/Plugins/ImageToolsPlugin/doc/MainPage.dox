@@ -1,0 +1,12 @@
+# Main page for the documentation of this library.
+
+/**
+
+\mainpage ImageToolsPlugin
+
+\section introduction_sec Introduction
+Description of the library.
+
+Common tools for Image like Cropping or change orientation.
+
+*/

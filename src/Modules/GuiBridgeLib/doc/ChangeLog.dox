@@ -1,0 +1,52 @@
+/**
+
+\page ChangeLog Changes
+
+
+
+
+\section List_of_developers List of developers and nick names
+- <b> Constantine Butakoff </b>: cbutakoff
+- <b> Federico Sukno </b>: fsukno
+- <b> Sergio Andres Ruiz </b>: sandres
+- <b>  </b>: irano
+- <b>  </b>: agonzalez
+- <b>  </b>: spavani
+- <b>  </b>: vdialinos
+- <b>  </b>: sordas
+- <b> Xavi Planes </b>: xplanes
+- <b> Maarten Nieber </b>: mnieber
+
+This document has been created on 30-10-07
+
+
+
+
+
+
+***************************************************************************
+<HR> <h1> GuiBridgeLib Current version </h1>
+
+	- <b> Start Date </b>:	30-10-07
+	- <b> Finish Date </b>:	
+
+
+_________________________________________
+<h2> External libraries </h2>
+
+- BOOST_1_34_1
+- QT-3.3.7
+
+
+_________________________________________
+<h2> BugFixes </h2> 
+
+- 17-12-07 xplanes
+	- Corrected a bug in Linux in gblValidate.cpp
+
+
+_________________________________________
+<h2> Modifications </h2> 
+
+
+*/

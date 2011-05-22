@@ -1,0 +1,9 @@
+# Main page for the documentation of this library.
+/**
+
+\mainpage DynLib
+
+\section intro_sec Introduction
+DynLib is a library for executuion of dynamic libraries
+
+*/

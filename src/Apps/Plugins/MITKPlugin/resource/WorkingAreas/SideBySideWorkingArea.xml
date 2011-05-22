@@ -1,0 +1,106 @@
+<?xml version="0" ?>
+<tagmap size="5">
+    <tag name="Size" type="unsigned int">2</tag>
+    <tag name="View0" type="class blSmartPointer&lt;class blTagMap&gt;">Unsupported value type
+        <tagmap size="10">
+            <tag name="Name" type="std::string">View</tag>
+            <tag name="Layout" type="int">7</tag>
+            <tag name="EnableDisplayPlaneSubtree" type="bool">0</tag>
+            <tag name="Size" type="unsigned int">4</tag>
+            <tag name="SliceView0" type="class blSmartPointer&lt;class blTagMap&gt;">Unsupported value type
+                <tagmap size="6">
+                    <tag name="Name" type="std::string">Win3D</tag>
+                    <tag name="Mapper" type="int">2</tag>
+                    <tag name="ViewDirection" type="int">3</tag>
+                    <tag name="Top" type="bool">1</tag>
+                    <tag name="FrontSide" type="bool">1</tag>
+                    <tag name="Rotated" type="bool">0</tag>
+                </tagmap>
+            </tag>
+            <tag name="SliceView1" type="class blSmartPointer&lt;class blTagMap&gt;">Unsupported value type
+                <tagmap size="6">
+                    <tag name="Name" type="std::string">WinZ</tag>
+                    <tag name="Mapper" type="int">1</tag>
+                    <tag name="ViewDirection" type="int">0</tag>
+                    <tag name="Top" type="bool">1</tag>
+                    <tag name="FrontSide" type="bool">0</tag>
+                    <tag name="Rotated" type="bool">1</tag>
+                </tagmap>
+            </tag>
+            <tag name="SliceView2" type="class blSmartPointer&lt;class blTagMap&gt;">Unsupported value type
+                <tagmap size="6">
+                    <tag name="Name" type="std::string">WinX</tag>
+                    <tag name="Mapper" type="int">1</tag>
+                    <tag name="ViewDirection" type="int">1</tag>
+                    <tag name="Top" type="bool">1</tag>
+                    <tag name="FrontSide" type="bool">1</tag>
+                    <tag name="Rotated" type="bool">0</tag>
+                </tagmap>
+            </tag>
+            <tag name="SliceView3" type="class blSmartPointer&lt;class blTagMap&gt;">Unsupported value type
+                <tagmap size="6">
+                    <tag name="Name" type="std::string">WinY</tag>
+                    <tag name="Mapper" type="int">1</tag>
+                    <tag name="ViewDirection" type="int">2</tag>
+                    <tag name="Top" type="bool">1</tag>
+                    <tag name="FrontSide" type="bool">1</tag>
+                    <tag name="Rotated" type="bool">0</tag>
+                </tagmap>
+            </tag>
+            <tag name="Layer" type="int">1</tag>
+            <tag name="Row" type="int">0</tag>
+        </tagmap>
+    </tag>
+    <tag name="View1" type="class blSmartPointer&lt;class blTagMap&gt;">Unsupported value type
+        <tagmap size="10">
+            <tag name="Name" type="std::string">View</tag>
+            <tag name="Layout" type="int">7</tag>
+            <tag name="EnableDisplayPlaneSubtree" type="bool">0</tag>
+            <tag name="Size" type="unsigned int">4</tag>
+            <tag name="SliceView0" type="class blSmartPointer&lt;class blTagMap&gt;">Unsupported value type
+                <tagmap size="6">
+                    <tag name="Name" type="std::string">Win3D</tag>
+                    <tag name="Mapper" type="int">2</tag>
+                    <tag name="ViewDirection" type="int">3</tag>
+                    <tag name="Top" type="bool">1</tag>
+                    <tag name="FrontSide" type="bool">1</tag>
+                    <tag name="Rotated" type="bool">0</tag>
+                </tagmap>
+            </tag>
+            <tag name="SliceView1" type="class blSmartPointer&lt;class blTagMap&gt;">Unsupported value type
+                <tagmap size="6">
+                    <tag name="Name" type="std::string">WinZ</tag>
+                    <tag name="Mapper" type="int">1</tag>
+                    <tag name="ViewDirection" type="int">0</tag>
+                    <tag name="Top" type="bool">1</tag>
+                    <tag name="FrontSide" type="bool">0</tag>
+                    <tag name="Rotated" type="bool">1</tag>
+                </tagmap>
+            </tag>
+            <tag name="SliceView2" type="class blSmartPointer&lt;class blTagMap&gt;">Unsupported value type
+                <tagmap size="6">
+                    <tag name="Name" type="std::string">WinX</tag>
+                    <tag name="Mapper" type="int">1</tag>
+                    <tag name="ViewDirection" type="int">1</tag>
+                    <tag name="Top" type="bool">1</tag>
+                    <tag name="FrontSide" type="bool">1</tag>
+                    <tag name="Rotated" type="bool">0</tag>
+                </tagmap>
+            </tag>
+            <tag name="SliceView3" type="class blSmartPointer&lt;class blTagMap&gt;">Unsupported value type
+                <tagmap size="6">
+                    <tag name="Name" type="std::string">WinY</tag>
+                    <tag name="Mapper" type="int">1</tag>
+                    <tag name="ViewDirection" type="int">2</tag>
+                    <tag name="Top" type="bool">1</tag>
+                    <tag name="FrontSide" type="bool">1</tag>
+                    <tag name="Rotated" type="bool">0</tag>
+                </tagmap>
+            </tag>
+            <tag name="Layer" type="int">2</tag>
+            <tag name="Row" type="int">0</tag>
+        </tagmap>
+    </tag>
+    <tag name="Name" type="std::string">SideBySideWorkingArea</tag>
+    <tag name="Icon" type="std::string">SideBySideWorkingArea.png</tag>
+</tagmap>

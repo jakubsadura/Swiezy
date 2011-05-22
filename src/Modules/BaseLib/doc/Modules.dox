@@ -1,0 +1,63 @@
+/**
+
+\defgroup baseLib baseLib
+\ingroup Libmodules
+
+\defgroup baseLibITK baseLibITK
+\ingroup Libmodules
+
+\defgroup baseLibVTK baseLibVTK
+\ingroup Libmodules
+
+\defgroup baseLibMITK baseLibMITK
+\ingroup Libmodules
+
+\defgroup baseLibWxWidgets baseLibWxWidgets
+\ingroup Libmodules
+
+\defgroup baseLibMATLAB baseLibMATLAB
+\ingroup Libmodules
+
+\defgroup baseLibCxxTest baseLibCxxTest
+\ingroup Libmodules
+
+\defgroup blCommon blCommon
+\ingroup baseLib
+
+\defgroup blImage blImage
+\ingroup baseLibITK
+
+\defgroup blImageProperties blImageProperties
+\ingroup baseLibITK
+
+\defgroup blImageUtilities blImageUtilities
+\ingroup baseLibITK
+
+\defgroup blIO blIO
+\ingroup baseLibVTK 
+
+\defgroup blMath blMath
+\ingroup baseLibITK
+
+\defgroup blPDAlignment blPDAlignment
+\ingroup baseLibITK
+
+\defgroup blPDShape blPDShape
+\ingroup baseLibITK
+
+\defgroup blUtilities blUtilities
+\ingroup baseLibITK
+
+\defgroup blUtilitiesVTK blUtilitiesVTK
+\ingroup baseLibVTK 
+
+\defgroup blUtilitiesMITK blUtilitiesMITK
+\ingroup baseLibMITK
+
+\defgroup blMatlabUtils blMatlabUtils
+\ingroup baseLibMATLAB 
+
+\defgroup baseLibVTKTest baseLibVTKTest
+\ingroup Tests
+
+*/

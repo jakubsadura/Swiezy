@@ -1,0 +1,19 @@
+/**
+
+\defgroup TpExtLib TpExtLib
+\ingroup Libmodules
+\brief Extension to some third parties
+
+\defgroup TpExtLibWxWidgets TpExtLibWxWidgets
+\ingroup TpExtLib
+\brief Extension to wxWidgets
+
+\defgroup tpExtLibMITK tpExtLibMITK
+\ingroup TpExtLib
+\brief Extension to MITK
+
+\defgroup tpExtLibITK tpExtLibITK
+\ingroup TpExtLib
+\brief Extension to ITK
+
+*/

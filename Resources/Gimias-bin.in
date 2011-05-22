@@ -1,0 +1,5 @@
+#!/bin/bash
+
+export LD_LIBRARY_PATH=@LD_GIMIAS_PATH_BIN@:${PWD}/lib:$LD_LIBRARY_PATH
+
+exec ./gimias 1>/dev/null 2>&1

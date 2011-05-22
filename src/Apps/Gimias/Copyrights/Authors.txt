@@ -1,0 +1,19 @@
+*********************************
+GIMIAS Authors and Contributors
+*********************************
+
+- Valeria Barbarito, Developer, 05/2009 to Present
+- Martin Bianculli, Developer, 01/2008 to 01/2010
+- Luigi Carotenuto, Developer, 05/2009 to Present
+- Vasilis Dialinos, Developer, 01/2007 to 08/2007
+- David Lucena, Developer, 09/2010 to Present
+- Jakub Lyko, Developer, 03/2008 to 01/2010
+- Yves Martelli, Developer, 08/2007 to Present
+- Xavier Mellado, Developer, 02/2007 to 12/2007
+- Juan Antonio Moya, Developer, 02/2007 to 03/2008
+- Maarten Nieber, Developer, 07/2007 to 02/2009
+- Pedro Omedas, Developer, 03/2008 to Present
+- Xavier Planes, Developer, 05/2007 to Present
+- Chiara Riccobene, Developer, 06/2008 to Present
+- Albert Sanchez, Developer, 01/2010 to Present
+- Martin Steghöfer, Developer, 07/2008 to Present

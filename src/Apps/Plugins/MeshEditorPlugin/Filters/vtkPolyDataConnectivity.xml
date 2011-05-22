@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<executable>
+  <category>Mesh processing</category>
+  <title>PolyData Connectivity Filter</title>
+  <description>Extract polygonal data based on geometric connectivity. Extraction Mode can be: 1 ExtractPointSeededRegion (not implemented), 2 ExtractCellSeededRegion (not implemented), 3 ExtractSpecifiedRegion (not implemented), 4 ExtractLargestRegion, 5 ExtractAllRegion, 6 ExtractClosestPointRegion (not implemented) </description>
+  <version>1.0</version>
+  <documentation-url>http://noodle.med.yale.edu/vtk5/classvtkPolyDataConnectivityFilter.html</documentation-url>
+  <license></license>
+  <contributor>Xavi Planes</contributor>
+  <constructor>New</constructor>
+  <destructor>Delete</destructor>
+  <updateFunction>Update</updateFunction>
+  <dynamicLibrary>vtkGraphics</dynamicLibrary>
+  <hierarchy>vtkPolyDataConnectivityFilter,vtkPolyDataAlgorithm,vtkAlgorithm,vtkObject,vtkObjectBase</hierarchy>
+
+  <parameters>
+    <label>Parameters</label>
+    <description>Parameters</description>
+	
+	 <integer>
+      <name>ExtractionMode</name>
+      <label>ExtractionMode</label>
+      <default>4</default>
+	  <constraints>
+        <minimum>1</minimum>
+        <maximum>5</maximum>
+      </constraints>
+    </integer>
+	<integer>
+      <name>ColorRegions</name>
+      <label>ColorRegions</label>
+      <default>1</default>
+    </integer>
+  </parameters>
+
+  <parameters>
+    <label>IO</label>
+    <description>Input/output parameters</description>
+    <geometry>
+      <name>InputMesh</name>
+      <label>InputMesh</label>
+      <dataType>vtkPolyData</dataType>
+      <channel>input</channel>
+      <index>0</index>
+    </geometry>
+    <geometry>
+      <name>OutputMesh</name>
+      <label>OutputMesh</label>
+      <dataType>vtkPolyData</dataType>
+      <channel>output</channel>
+      <index>1</index>
+    </geometry>
+  </parameters>
+
+</executable>

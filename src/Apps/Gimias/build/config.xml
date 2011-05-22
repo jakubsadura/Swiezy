@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+# Copyright 2008 Pompeu Fabra University (Computational Imaging Laboratory), Barcelona, Spain.
+# Web: www.cilab.upf.edu
+# This software is distributed WITHOUT ANY WARRANTY;
+# without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Cruise Control project configuration file.
+-->
+
+<cruisecontrol>
+
+   <!-- 
+   \name gmCore
+   \brief Builds the gmCore library.
+   -->
+   <project.default name="gmCore">
+
+      <!-- Properties -->
+      <property name="project.instance_name" value="${project.name}"/>
+      <property name="project.type_src_folder" value="Apps/Gimias"/>
+      <property name="project.type_bin_folder" value="library"/>
+      <property name="project.source_path" value="${main.toolkit_src_folder}/${project.type_src_folder}"/>
+      <property name="project.csn_file" value="${project.source_path}/csnGMCore.py"/>
+      <property name="project.doc_run_folder" value="${project.source_path}/doc"/>
+      <property name="project.doc_config_file" value="${project.source_path}/doc/Doxyfile.doxy"/>
+
+      <!-- Bootstrappers are run every time the build runs, *before* the modification checks -->
+      <bootstrappers>
+         <svnbootstrapper file="${project.csn_file}"/>
+         <svnbootstrapper file="${project.source_path}/build"/>
+         <svnbootstrapper file="${project.source_path}/Core/__init__.py"/>
+         <svnbootstrapper file="${project.source_path}/GUI/__init__.py"/>
+         <svnbootstrapper localWorkingCopy="${project.source_path}/Copyrights"/>
+         <svnbootstrapper localWorkingCopy="${project.source_path}/resource"/>
+         <svnbootstrapper localWorkingCopy="${project.source_path}/scripts"/>
+         <svnbootstrapper localWorkingCopy="${project.source_path}/doc"/>
+         <svnbootstrapper localWorkingCopy="${project.source_path}/Tests"/>
+      </bootstrappers>
+
+      <!-- Modificationset: triggers for rebuild -->
+      <modificationset>
+         <svn localworkingcopy="${project.source_path}/build"/>
+         <buildstatus logdir="${main.log_folder}/ThirdParty"/>
+         <buildstatus logdir="${main.log_folder}/gmCommonObjects"/>
+         <buildstatus logdir="${main.log_folder}/gmDataHandling"/>
+         <buildstatus logdir="${main.log_folder}/gmKernel"/>
+         <buildstatus logdir="${main.log_folder}/gmWidgets"/>
+         <buildstatus logdir="${main.log_folder}/gmInteractors"/>
+         <buildstatus logdir="${main.log_folder}/gmProcessors"/>
+      </modificationset>
+
+      <!-- Use the svn revision in the build number -->
+      <svnlabelincrementer workingcopypath="${project.source_path}/build"/>
+
+   </project.default>
+
+</cruisecontrol>

@@ -1,0 +1,11 @@
+
+/**
+
+\defgroup gmWidgets gmWidgets
+\ingroup Gimias
+\brief gmWidgets This category includes all the widgets that belong to the gmCore
+and can be used by all the plugins, e.g. the Appearance Suitcase.
+
+*/
+
+

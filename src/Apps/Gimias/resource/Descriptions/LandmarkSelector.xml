@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<executable>
+  <category></category>
+  <title>Landmark selector</title>
+  <description>Select one or multiple landmark points over an image or surface mesh pressing SHIFT + left mouse click</description>
+  <version>1.0</version>
+  <documentation-url></documentation-url>
+  <license></license>
+  <contributor>Xavi Planes</contributor>
+
+</executable>

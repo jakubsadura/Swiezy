@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+# Copyright 2008 Pompeu Fabra University (Computational Imaging Laboratory), Barcelona, Spain.
+# Web: www.cilab.upf.edu
+# This software is distributed WITHOUT ANY WARRANTY;
+# without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Cruise Control project configuration file.
+-->
+
+<cruisecontrol>
+
+   <!-- 
+   \name SceneViewPlugin
+   \brief Builds the SceneView plugin.
+   -->
+   <project.default name="SceneViewPlugin">
+
+      <!-- Properties -->
+      <property name="project.instance_name" value="sceneViewPlugin"/>
+      <property name="project.type_src_folder" value="Apps/Plugins"/>
+      <property name="project.type_bin_folder" value="library"/>
+
+      <!-- Modificationset: triggers for rebuild -->
+      <modificationset>
+         <svn/>
+         <buildstatus logdir="${main.log_folder}/gmCore"/>
+      </modificationset>
+
+   </project.default>
+
+</cruisecontrol>
